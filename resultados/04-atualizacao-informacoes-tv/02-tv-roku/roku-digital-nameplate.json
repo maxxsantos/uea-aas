@@ -1,0 +1,88 @@
+{
+    "DigitalNameplate": {
+        "URIOfTheProduct": "https://www.audioevideo.philips/philips-google-tv-50-4k-hdr-serie-7408-tpv-50pug740878/p",
+        "ManufacturerName": [
+            {
+                "en": "TPV Technology"
+            },
+            {
+                "zh": "\u51A0\u6377\u79D1\u6280"
+            },
+            {
+                "br": "TPV Technology"
+            },
+            {
+                "es": "TPV Tecnolog\u00EDa"
+            }
+        ],
+        "ManufacturerProductDesignation": [
+            {
+                "en": "Smart TV 50\u0022 4K Google TV Philips"
+            }
+        ],
+        "ContactInformation": {
+            "NationalCode": [
+                {
+                    "en": "BR"
+                }
+            ],
+            "CityTown": [
+                {
+                    "en": "Manaus"
+                }
+            ],
+            "Company": [
+                {
+                    "en": "TPV Brazil"
+                }
+            ],
+            "Phone": {
+                "TelephoneNumber": [
+                    {
+                        "en": "\u002B5592932328484"
+                    }
+                ]
+            },
+            "Email": [
+                {
+                    "EmailAddress": "email@tpv-tech.com"
+                }
+            ],
+            "Street": [
+                {
+                    "en": " Av. Torquato Tapaj\u00F3s, 1758"
+                }
+            ],
+            "Zipcode": [
+                {
+                    "en": "69058-830"
+                }
+            ],
+            "StateCounty": [
+                {
+                    "en": "Amazonas"
+                }
+            ]
+        },
+        "SerialNumber": "12345678",
+        "YearOfConstruction": "2023",
+        "DateOfManufacture": "2023-01-01",
+        "HardwareVersion": [
+            {
+                "en": "1.0.0"
+            }
+        ],
+        "FirmwareVersion": [
+            {
+                "en": "1.0"
+            }
+        ],
+        "SoftwareVersion": [
+            {
+                "en": "1.0.0"
+            }
+        ],
+        "CountryOfOrigin": "BR",
+        "CompanyLogo": "/aasx/logo-tpv.png"
+    }
+}

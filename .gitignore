@@ -1,3 +1,6 @@
 DawnCache
 GPUCache
 backup
+resultados/03-deploy-modelagem-aasx/logs/*
+resultados/03-deploy-modelagem-aasx/PKI/*
+resultados/03-deploy-modelagem-aasx/USERS_PKI/*
