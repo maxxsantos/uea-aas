@@ -1,0 +1,41 @@
+{
+  "TechnicalData": {
+    "GeneralInformation": {
+      "ManufacturerName": "Envision",
+      "ManufacturerProductDesignation": [
+        {
+          "en": "\u200ESmart TV 50\u0022 4K Google TV Philips"
+        }
+      ],
+      "ManufacturerArticleNumber": "50PUG7408/78",
+      "ManufacturerOrderCode": "EEA-EX-200-S/47-Q3",
+      "ProductImage": "NON_EMPTY_VALUE"
+    },
+    "TechnicalProperties": {
+      "Dimentions": {
+        "Width": " 111,13 cm",
+        "Height": "65,44 cm",
+        "Depth": "8,75 cm"
+      },
+      "Connections": {
+        "HDMI": "3",
+        "USB": "2",
+        "RF": "1",
+        "WiFi": "true",
+        "Ethernet": "true",
+        "Bluetooth": "true"
+      },
+      "ScreenInformations": {
+        "Frequency": "60 Hz",
+        "Resolution": "3840 x 2160 Pixels",
+        "ScreenSize": "50",
+        "ScreenTechnology": "4K UHD"
+      },
+      "Others": {
+        "OperationSystem": "Google TV",
+        "Color": "Black",
+        "Weight": "12,5 Kg"
+      }
+    }
+  }
+}

@@ -1,0 +1,939 @@
+[
+    {
+        "id": "f6f2187d.f17ca8",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "860784dfb7e01512",
+        "type": "group",
+        "z": "f6f2187d.f17ca8",
+        "style": {
+            "stroke": "#999999",
+            "stroke-opacity": "1",
+            "fill": "none",
+            "fill-opacity": "1",
+            "label": true,
+            "label-position": "nw",
+            "color": "#a4a4a4"
+        },
+        "nodes": [
+            "5a8b485be888914e",
+            "c88c4a0f2d0b6995",
+            "17576840b20f5c9d",
+            "ab3b40b5bb166422",
+            "dd19d96d9ee18dc9",
+            "9a64ece27465a4c1"
+        ],
+        "x": 1374,
+        "y": 259,
+        "w": 452,
+        "h": 282
+    },
+    {
+        "id": "ce1d2a38e567b058",
+        "type": "group",
+        "z": "f6f2187d.f17ca8",
+        "style": {
+            "stroke": "#999999",
+            "stroke-opacity": "1",
+            "fill": "none",
+            "fill-opacity": "1",
+            "label": true,
+            "label-position": "nw",
+            "color": "#a4a4a4"
+        },
+        "nodes": [
+            "e1e1556639b281a0",
+            "27e02be33cb895df"
+        ],
+        "x": 1374,
+        "y": 599,
+        "w": 472,
+        "h": 122
+    },
+    {
+        "id": "585777de5e2fac26",
+        "type": "group",
+        "z": "f6f2187d.f17ca8",
+        "style": {
+            "stroke": "#999999",
+            "stroke-opacity": "1",
+            "fill": "none",
+            "fill-opacity": "1",
+            "label": true,
+            "label-position": "nw",
+            "color": "#a4a4a4"
+        },
+        "nodes": [
+            "0a54a398fd18deb1",
+            "a8805a22839514dd"
+        ],
+        "x": 1374,
+        "y": 759,
+        "w": 432,
+        "h": 122
+    },
+    {
+        "id": "80cfcf1259962331",
+        "type": "group",
+        "z": "f6f2187d.f17ca8",
+        "style": {
+            "stroke": "#999999",
+            "stroke-opacity": "1",
+            "fill": "none",
+            "fill-opacity": "1",
+            "label": true,
+            "label-position": "nw",
+            "color": "#a4a4a4"
+        },
+        "nodes": [
+            "4eacc24071f6df99",
+            "310ba5d959dbe744"
+        ],
+        "x": 1374,
+        "y": 919,
+        "w": 392,
+        "h": 122
+    },
+    {
+        "id": "d5fea42c1dc92e25",
+        "type": "tls-config",
+        "name": "",
+        "cert": "",
+        "key": "",
+        "ca": "",
+        "certname": "",
+        "keyname": "",
+        "caname": "",
+        "servername": "",
+        "verifyservercert": false,
+        "alpnprotocol": ""
+    },
+    {
+        "id": "259074af56f4cdd2",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-light",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#0094CE",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#097479",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#4B7930",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#0094CE",
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#fafafa",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#1bbfff",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#0094ce",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey",
+                "palette": "light"
+            }
+        },
+        "site": {
+            "name": "Node-RED Dashboard",
+            "hideToolbar": "false",
+            "allowSwipe": "false",
+            "lockMenu": "false",
+            "allowTempTheme": "true",
+            "dateFormat": "DD/MM/YYYY",
+            "sizes": {
+                "sx": 100,
+                "sy": 100,
+                "gx": 1,
+                "gy": 1,
+                "cx": 1,
+                "cy": 1,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
+        "id": "9bb8fbfdc5898198",
+        "type": "ui_tab",
+        "name": "Starview - Monitoramento Avançado de Televisão",
+        "icon": "dashboard",
+        "order": 1,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "2ace44539e065e94",
+        "type": "ui_group",
+        "name": "Entrada",
+        "tab": "9bb8fbfdc5898198",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "79c5e93c112be015",
+        "type": "ui_spacer",
+        "z": "f6f2187d.f17ca8",
+        "name": "spacer",
+        "group": "3ffd5e22ccb9422e",
+        "order": 1,
+        "width": "1",
+        "height": "1"
+    },
+    {
+        "id": "f6df980ee5383d36",
+        "type": "ui_spacer",
+        "z": "f6f2187d.f17ca8",
+        "name": "spacer",
+        "group": "3ffd5e22ccb9422e",
+        "order": 6,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "3ffd5e22ccb9422e",
+        "type": "ui_group",
+        "name": "Digital Nameplate",
+        "tab": "9bb8fbfdc5898198",
+        "order": 2,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "bc22739f11b51928",
+        "type": "ui_group",
+        "name": "Vendor Information",
+        "tab": "9bb8fbfdc5898198",
+        "order": 4,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "5f8456c8ecf3a6e8",
+        "type": "ui_group",
+        "name": "Technical Data",
+        "tab": "9bb8fbfdc5898198",
+        "order": 3,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "e2b470eed7a01c49",
+        "type": "ui_spacer",
+        "z": "f6f2187d.f17ca8",
+        "name": "spacer",
+        "group": "fa6f48fa1d8afd69",
+        "order": 1,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "8ea1f501a73f4f00",
+        "type": "ui_group",
+        "name": "Group 2",
+        "tab": "",
+        "order": 1,
+        "disp": true,
+        "width": 6
+    },
+    {
+        "id": "c9554f2051dac637",
+        "type": "ui_group",
+        "name": "Profile",
+        "tab": "9bb8fbfdc5898198",
+        "order": 5,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "54d2d408116489fb",
+        "type": "ui_spacer",
+        "z": "f6f2187d.f17ca8",
+        "name": "spacer",
+        "group": "c9554f2051dac637",
+        "order": 2,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "66babba94508976d",
+        "type": "http request",
+        "z": "f6f2187d.f17ca8",
+        "name": "",
+        "method": "GET",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "",
+        "tls": "d5fea42c1dc92e25",
+        "persist": true,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 730,
+        "y": 380,
+        "wires": [
+            [
+                "1e1d74e9f44006ac",
+                "9c3ca0f7afdaff5e",
+                "0e67c49efeb61583",
+                "6ce1c4935dbc7ef0",
+                "e82292359d11ee1f"
+            ]
+        ]
+    },
+    {
+        "id": "1e1d74e9f44006ac",
+        "type": "debug",
+        "z": "f6f2187d.f17ca8",
+        "name": "debug 1",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 960,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "a4d6270a22177f01",
+        "type": "debug",
+        "z": "f6f2187d.f17ca8",
+        "name": "debug 2",
+        "active": false,
+        "tosidebar": true,
+        "console": true,
+        "tostatus": false,
+        "complete": "url",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 610,
+        "y": 560,
+        "wires": []
+    },
+    {
+        "id": "234c818c5b36e3ad",
+        "type": "function",
+        "z": "f6f2187d.f17ca8",
+        "name": "function 1",
+        "func": "let url = \"\";\n\nif (msg.payload.serial == \"12345\") {\n    url = \"https://localhost:5051/api/v3.0/submodels/\";\n} else if (msg.payload.serial == \"54321\") {\n    url = \"https://localhost:5052/api/v3.0/submodels/\";\n} else {\n    url = \"http://localhost:1880/\";\n}\n\n\nmsg.url = url;\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 460,
+        "y": 380,
+        "wires": [
+            [
+                "66babba94508976d",
+                "a4d6270a22177f01"
+            ]
+        ]
+    },
+    {
+        "id": "c88c4a0f2d0b6995",
+        "type": "ui_text",
+        "z": "f6f2187d.f17ca8",
+        "g": "860784dfb7e01512",
+        "group": "3ffd5e22ccb9422e",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Manufacturer Product Designation",
+        "format": "{{content.submodelElements[6].value[0].text}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 1540,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "17576840b20f5c9d",
+        "type": "ui_text",
+        "z": "f6f2187d.f17ca8",
+        "g": "860784dfb7e01512",
+        "group": "3ffd5e22ccb9422e",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Serial Number",
+        "format": "{{content.submodelElements[1].value}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 1480,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "ab3b40b5bb166422",
+        "type": "ui_text",
+        "z": "f6f2187d.f17ca8",
+        "g": "860784dfb7e01512",
+        "group": "3ffd5e22ccb9422e",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Hardware Version",
+        "format": "{{content.submodelElements[7].value[0].text}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 1490,
+        "y": 420,
+        "wires": []
+    },
+    {
+        "id": "dd19d96d9ee18dc9",
+        "type": "ui_text",
+        "z": "f6f2187d.f17ca8",
+        "g": "860784dfb7e01512",
+        "group": "3ffd5e22ccb9422e",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Software Version",
+        "format": "{{content.submodelElements[9].value[0].text}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 1490,
+        "y": 460,
+        "wires": []
+    },
+    {
+        "id": "9a64ece27465a4c1",
+        "type": "ui_text",
+        "z": "f6f2187d.f17ca8",
+        "g": "860784dfb7e01512",
+        "group": "3ffd5e22ccb9422e",
+        "order": 5,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Firmware Version",
+        "format": "{{content.submodelElements[8].value[0].text}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 1490,
+        "y": 500,
+        "wires": []
+    },
+    {
+        "id": "f7681fc5fa3da1aa",
+        "type": "ui_form",
+        "z": "f6f2187d.f17ca8",
+        "name": "",
+        "label": "",
+        "group": "2ace44539e065e94",
+        "order": 1,
+        "width": "4",
+        "height": "1",
+        "options": [
+            {
+                "label": "Serial",
+                "value": "serial",
+                "type": "text",
+                "required": true,
+                "rows": null
+            }
+        ],
+        "formValue": {
+            "serial": ""
+        },
+        "payload": "",
+        "submit": "Enviar",
+        "cancel": "Cancelar",
+        "topic": "topic",
+        "topicType": "msg",
+        "splitLayout": "",
+        "className": "",
+        "x": 150,
+        "y": 380,
+        "wires": [
+            [
+                "234c818c5b36e3ad",
+                "c8ad4b1a88ef8cb9"
+            ]
+        ]
+    },
+    {
+        "id": "c8ad4b1a88ef8cb9",
+        "type": "debug",
+        "z": "f6f2187d.f17ca8",
+        "name": "debug 3",
+        "active": false,
+        "tosidebar": true,
+        "console": true,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 390,
+        "y": 560,
+        "wires": []
+    },
+    {
+        "id": "310ba5d959dbe744",
+        "type": "ui_text",
+        "z": "f6f2187d.f17ca8",
+        "g": "80cfcf1259962331",
+        "group": "c9554f2051dac637",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Streaming - Accmulated Time",
+        "format": "1.0",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 1520,
+        "y": 1000,
+        "wires": []
+    },
+    {
+        "id": "a8805a22839514dd",
+        "type": "ui_text",
+        "z": "f6f2187d.f17ca8",
+        "g": "585777de5e2fac26",
+        "group": "5f8456c8ecf3a6e8",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Manufacturer Name",
+        "format": "{{content.submodelElements[0].value[0].value}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 1500,
+        "y": 840,
+        "wires": []
+    },
+    {
+        "id": "27e02be33cb895df",
+        "type": "ui_text",
+        "z": "f6f2187d.f17ca8",
+        "g": "ce1d2a38e567b058",
+        "group": "bc22739f11b51928",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "City Town",
+        "format": "{{content.submodelElements[0].value[0].value[0].text}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 1460,
+        "y": 680,
+        "wires": []
+    },
+    {
+        "id": "5a8b485be888914e",
+        "type": "comment",
+        "z": "f6f2187d.f17ca8",
+        "g": "860784dfb7e01512",
+        "name": "Valores armazenados no submodelo DigitalNameplate",
+        "info": "",
+        "x": 1600,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "9c3ca0f7afdaff5e",
+        "type": "function",
+        "z": "f6f2187d.f17ca8",
+        "name": "DigitalNameplate",
+        "func": "let content = \"\";\n\ntry {\n    content = msg.payload.result[0];\n}\ncatch {\n    content = \"\";\n}\n\nmsg.content = content;\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1050,
+        "y": 380,
+        "wires": [
+            [
+                "04f4ac9355259811",
+                "9a480adede55c69a"
+            ]
+        ]
+    },
+    {
+        "id": "0e67c49efeb61583",
+        "type": "function",
+        "z": "f6f2187d.f17ca8",
+        "name": "VendorInformations",
+        "func": "let content = \"\";\n\ntry {\n    content = msg.payload.result[1];\n}\ncatch {\n    content = \"\";\n}\n\nmsg.content = content;\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1050,
+        "y": 500,
+        "wires": [
+            [
+                "1eb80b5ef7ae67b4",
+                "e219f42a57c42e2a"
+            ]
+        ]
+    },
+    {
+        "id": "6ce1c4935dbc7ef0",
+        "type": "function",
+        "z": "f6f2187d.f17ca8",
+        "name": "TechnicalData",
+        "func": "let content = \"\";\n\ntry {\n    content = msg.payload.result[2];\n}\ncatch {\n    content = \"\";\n}\n\nmsg.content = content;\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1000,
+        "y": 720,
+        "wires": [
+            [
+                "e8a9aa431d92ee9c",
+                "ae417d9ec1f0e27c"
+            ]
+        ]
+    },
+    {
+        "id": "e82292359d11ee1f",
+        "type": "function",
+        "z": "f6f2187d.f17ca8",
+        "name": "Profile",
+        "func": "let content = \"\";\n\ntry {\n    content = msg.payload.result[3];\n}\ncatch {\n    content = \"\";\n}\n\nmsg.content = content;\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 930,
+        "y": 920,
+        "wires": [
+            [
+                "f047e952b2a321ee",
+                "f27079d60c162aea"
+            ]
+        ]
+    },
+    {
+        "id": "e1e1556639b281a0",
+        "type": "comment",
+        "z": "f6f2187d.f17ca8",
+        "g": "ce1d2a38e567b058",
+        "name": "Valores armazenados no submodelo VendorInformations",
+        "info": "",
+        "x": 1610,
+        "y": 640,
+        "wires": []
+    },
+    {
+        "id": "0a54a398fd18deb1",
+        "type": "comment",
+        "z": "f6f2187d.f17ca8",
+        "g": "585777de5e2fac26",
+        "name": "Valores armazenados no submodelo TechnicalData",
+        "info": "",
+        "x": 1590,
+        "y": 800,
+        "wires": []
+    },
+    {
+        "id": "4eacc24071f6df99",
+        "type": "comment",
+        "z": "f6f2187d.f17ca8",
+        "g": "80cfcf1259962331",
+        "name": "Valores armazenados no submodelo Profile",
+        "info": "",
+        "x": 1570,
+        "y": 960,
+        "wires": []
+    },
+    {
+        "id": "04f4ac9355259811",
+        "type": "debug",
+        "z": "f6f2187d.f17ca8",
+        "name": "debug 4",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "content",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1220,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "9a480adede55c69a",
+        "type": "switch",
+        "z": "f6f2187d.f17ca8",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "neq",
+                "v": "\"\"",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 1270,
+        "y": 380,
+        "wires": [
+            [
+                "c88c4a0f2d0b6995",
+                "17576840b20f5c9d",
+                "ab3b40b5bb166422",
+                "dd19d96d9ee18dc9",
+                "9a64ece27465a4c1"
+            ]
+        ]
+    },
+    {
+        "id": "1eb80b5ef7ae67b4",
+        "type": "switch",
+        "z": "f6f2187d.f17ca8",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "neq",
+                "v": "\"\"",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 1270,
+        "y": 500,
+        "wires": [
+            [
+                "27e02be33cb895df"
+            ]
+        ]
+    },
+    {
+        "id": "e8a9aa431d92ee9c",
+        "type": "switch",
+        "z": "f6f2187d.f17ca8",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "neq",
+                "v": "\"\"",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 1210,
+        "y": 720,
+        "wires": [
+            [
+                "a8805a22839514dd"
+            ]
+        ]
+    },
+    {
+        "id": "f047e952b2a321ee",
+        "type": "switch",
+        "z": "f6f2187d.f17ca8",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "neq",
+                "v": "\"\"",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 1150,
+        "y": 920,
+        "wires": [
+            [
+                "310ba5d959dbe744"
+            ]
+        ]
+    },
+    {
+        "id": "e219f42a57c42e2a",
+        "type": "debug",
+        "z": "f6f2187d.f17ca8",
+        "name": "debug 5",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "content",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1240,
+        "y": 440,
+        "wires": []
+    },
+    {
+        "id": "ae417d9ec1f0e27c",
+        "type": "debug",
+        "z": "f6f2187d.f17ca8",
+        "name": "debug 6",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "content",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1180,
+        "y": 660,
+        "wires": []
+    },
+    {
+        "id": "f27079d60c162aea",
+        "type": "debug",
+        "z": "f6f2187d.f17ca8",
+        "name": "debug 7",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "content",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1100,
+        "y": 840,
+        "wires": []
+    }
+]

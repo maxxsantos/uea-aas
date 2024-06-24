@@ -1,0 +1,46 @@
+{
+  "VendorInformations": {
+    "ContactInformation": {
+      "CityTown": [
+        {
+          "en": "Manaus"
+        }
+      ],
+      "Company": [
+        {
+          "en": "Bemol"
+        }
+      ],
+      "Department": [
+        {
+          "de": "Eletronic"
+        }
+      ],
+      "Phone": {
+        "TelephoneNumber": [
+          {
+            "en": "\u002B5592933225566"
+          }
+        ]
+      }
+    },
+    "Email": {
+      "EmailAddress": "bemolonline@bemol.com"
+    },
+    "Street": [
+      {
+        "en": "Av. Djalma Batista, 482"
+      }
+    ],
+    "Zipcode": [
+      {
+        "en": "69050-010"
+      }
+    ],
+    "StateCounty": [
+      {
+        "en": "Amazonas"
+      }
+    ]
+  }
+}
