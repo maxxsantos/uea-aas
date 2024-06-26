@@ -36,7 +36,7 @@
             "[ModelRef](Submodel)https://admin-shell.io/idta/SubmodelTemplate/ContactInformation/1/0, (SubmodelElementCollection)ContactInformation, (MultiLanguageProperty)CityTown":
             {
                 "format": "JSON",
-                "topic": "3505_0091_6042_7776/received/digital_nameplate",
+                "topic": "3321_1062_6042_0564/received/digital_nameplate",
                 "query": "$.DigitalNameplate.URIOfTheProduct"
             }
         }

@@ -3,43 +3,34 @@
         "URIOfTheProduct": "https://www.audioevideo.philips/philips-google-tv-50-4k-hdr-serie-7408-tpv-50pug740878/p",
         "ManufacturerName": [
             {
-                "en": "TPV Technology"
-            },
-            {
-                "zh": "\u51A0\u6377\u79D1\u6280"
-            },
-            {
-                "br": "TPV Technology"
-            },
-            {
-                "es": "TPV Tecnolog\u00EDa"
+                "br": "Philips"
             }
         ],
         "ManufacturerProductDesignation": [
             {
-                "en": "Smart TV 50\u0022 4K Google TV Philips"
+                "br": "Philips Google TV 50\u0022 4K HDR S\u00E9rie 7408"
             }
         ],
         "ContactInformation": {
             "NationalCode": [
                 {
-                    "en": "BR"
+                    "br": "BR"
                 }
             ],
             "CityTown": [
                 {
-                    "en": "Manaus"
+                    "br": "Manaus"
                 }
             ],
             "Company": [
                 {
-                    "en": "TPV Brazil"
+                    "br": "TPV do Brasil Ind\u00FAstria de Eletr\u00F4nicos LTDA"
                 }
             ],
             "Phone": {
                 "TelephoneNumber": [
                     {
-                        "en": "\u002B5592932328484"
+                        "br": "\u002B559221268833"
                     }
                 ]
             },
@@ -50,39 +41,39 @@
             ],
             "Street": [
                 {
-                    "en": " Av. Torquato Tapaj\u00F3s, 1758"
+                    "br": " Av. Torquato Tapaj\u00F3s, 1758"
                 }
             ],
             "Zipcode": [
                 {
-                    "en": "69058-830"
+                    "br": "69058-830"
                 }
             ],
             "StateCounty": [
                 {
-                    "en": "Amazonas"
+                    "br": "Amazonas"
                 }
             ]
         },
-        "SerialNumber": "12345678",
-        "YearOfConstruction": "2023",
-        "DateOfManufacture": "2023-01-01",
+        "SerialNumber": "4488A868AB",
+        "YearOfConstruction": "2024",
+        "DateOfManufacture": "2024-04-10",
         "HardwareVersion": [
             {
-                "en": "1.0.0"
+                "br": "5.2.1"
             }
         ],
         "FirmwareVersion": [
             {
-                "en": "1.0"
+                "br": "10.2.1"
             }
         ],
         "SoftwareVersion": [
             {
-                "en": "1.0.0"
+                "br": "MT5867_T56r_20220817_2025"
             }
         ],
         "CountryOfOrigin": "BR",
-        "CompanyLogo": "/aasx/logo-tpv.png"
+        "CompanyLogo": "/aasx/image6.jpg"
     }
 }

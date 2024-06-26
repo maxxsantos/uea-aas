@@ -36,7 +36,7 @@
             "[ModelRef](Submodel)https://admin-shell.io/idta/SubmodelTemplate/DigitalNameplate/2/0, (Property)URIOfTheProduct":
             {
                 "format": "JSON",
-                "topic": "3505_0091_6042_7776/received/digital_nameplate",
+                "topic": "1591_1252_6042_3233/received/digital_nameplate",
                 "query": "$.DigitalNameplate.URIOfTheProduct"
             }
         }
@@ -52,7 +52,7 @@
             "[ModelRef](Submodel)https://admin-shell.io/idta/SubmodelTemplate/DigitalNameplate/2/0, (MultiLanguageProperty)ManufacturerName":
             {
                 "format": "JSON",
-                "topic": "3505_0091_6042_7776/received/digital_nameplate",
+                "topic": "1591_1252_6042_3233/received/digital_nameplate",
                 "query": "$.DigitalNameplate.ManufacturerName"
             }
         }

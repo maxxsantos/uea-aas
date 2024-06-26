@@ -1,10 +1,10 @@
 {
   "TechnicalData": {
     "GeneralInformation": {
-      "ManufacturerName": "Envision",
+      "ManufacturerName": "Philips",
       "ManufacturerProductDesignation": [
         {
-          "en": "\u200ESmart TV 50\u0022 4K Google TV Philips"
+          "br": "Philips Google TV 50\u0022 4K HDR S\u00E9rie 7408"
         }
       ],
       "ManufacturerArticleNumber": "50PUG7408/78",
@@ -13,17 +13,17 @@
     },
     "TechnicalProperties": {
       "Dimentions": {
-        "Width": " 111,13 cm",
+        "Width": "111,13 cm",
         "Height": "65,44 cm",
         "Depth": "8,75 cm"
       },
       "Connections": {
-        "HDMI": "3",
-        "USB": "2",
-        "RF": "1",
-        "WiFi": "true",
-        "Ethernet": "true",
-        "Bluetooth": "true"
+        "HDMI": 3,
+        "USB": 2,
+        "RF": 1,
+        "WiFi": true,
+        "Ethernet": true,
+        "Bluetooth": true
       },
       "ScreenInformations": {
         "Frequency": "60 Hz",

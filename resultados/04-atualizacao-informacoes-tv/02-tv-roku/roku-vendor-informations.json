@@ -3,43 +3,43 @@
     "ContactInformation": {
       "CityTown": [
         {
-          "en": "Manaus"
+          "br": "Franca"
         }
       ],
       "Company": [
         {
-          "en": "Bemol"
+          "br": "Magazine Luiza"
         }
       ],
       "Department": [
         {
-          "de": "Eletronic"
+          "br": "Eletrodom\u00E9sticos"
         }
       ],
       "Phone": {
         "TelephoneNumber": [
           {
-            "en": "\u002B5592933225566"
+            "br": "\u002B551637112200"
           }
         ]
       }
     },
     "Email": {
-      "EmailAddress": "bemolonline@bemol.com"
+      "EmailAddress": "b2b@magazineluiza.com.br"
     },
     "Street": [
       {
-        "en": "Av. Djalma Batista, 482"
+        "br": "Voluntarios Da Franca, 1465"
       }
     ],
     "Zipcode": [
       {
-        "en": "69050-010"
+        "br": "14400-902"
       }
     ],
     "StateCounty": [
       {
-        "en": "Amazonas"
+        "br": "S\u00E3o Paulo"
       }
     ]
   }

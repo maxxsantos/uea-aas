@@ -3,23 +3,23 @@
     "ContactInformation": {
       "CityTown": [
         {
-          "en": "Manaus"
+          "br": "Manaus"
         }
       ],
       "Company": [
         {
-          "en": "Bemol"
+          "br": "Bemol"
         }
       ],
       "Department": [
         {
-          "de": "Eletronic"
+          "br": "Eletrodom\u00E9sticos"
         }
       ],
       "Phone": {
         "TelephoneNumber": [
           {
-            "en": "\u002B5592933225566"
+            "br": "\u002B5592933225566"
           }
         ]
       }
@@ -29,17 +29,17 @@
     },
     "Street": [
       {
-        "en": "Av. Djalma Batista, 482"
+        "br": "Av. Djalma Batista, 482"
       }
     ],
     "Zipcode": [
       {
-        "en": "69050-010"
+        "br": "69050-010"
       }
     ],
     "StateCounty": [
       {
-        "en": "Amazonas"
+        "br": "Amazonas"
       }
     ]
   }

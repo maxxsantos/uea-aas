@@ -1,19 +1,19 @@
 {
   "Profile": {
     "Streaming": {
-      "AccumulatedTime": 10,
-      "BeginTime": "",
-      "EndTime": ""
+      "AccumulatedTime": 30,
+      "BeginTime": "2024-09-01",
+      "EndTime": "2024-10-30"
     },
     "LiveTV": {
-      "AccumulatedTime": 5,
-      "BeginTime": "",
-      "EndTime": ""
+      "AccumulatedTime": 80,
+      "BeginTime": "2024-09-01",
+      "EndTime": "2024-10-30"
     },
     "InteractiveApplication": {
-      "AccumulatedTime": 6,
-      "BeginTime": "",
-      "EndTime": ""
+      "AccumulatedTime": 5,
+      "BeginTime": "2024-09-01",
+      "EndTime": "2024-10-30"
     }
   }
 }

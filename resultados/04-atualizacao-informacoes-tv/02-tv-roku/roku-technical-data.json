@@ -1,40 +1,40 @@
 {
   "TechnicalData": {
     "GeneralInformation": {
-      "ManufacturerName": "Envision",
+      "ManufacturerName": "AOC",
       "ManufacturerProductDesignation": [
         {
-          "en": "\u200ESmart TV 50\u0022 4K Google TV Philips"
+          "br": "Smart TV AOC Roku TV 32\u0022 HD - S\u00C9RIE 5135"
         }
       ],
-      "ManufacturerArticleNumber": "50PUG7408/78",
-      "ManufacturerOrderCode": "EEA-EX-200-S/47-Q3",
-      "ProductImage": "NON_EMPTY_VALUE"
+      "ManufacturerArticleNumber": "32S5045/78G",
+      "ManufacturerOrderCode": "FFA-EX-200-S/47-Q4",
+      "ProductImage": "/tv_roku.jpg"
     },
     "TechnicalProperties": {
       "Dimentions": {
-        "Width": " 111,13 cm",
-        "Height": "65,44 cm",
-        "Depth": "8,75 cm"
+        "Width": "71,6 cm",
+        "Height": "46,6 cm",
+        "Depth": "16,4 cm"
       },
       "Connections": {
-        "HDMI": "3",
-        "USB": "2",
-        "RF": "1",
-        "WiFi": "true",
-        "Ethernet": "true",
-        "Bluetooth": "true"
+        "HDMI": 3,
+        "USB": 1,
+        "RF": "ISDB-T",
+        "WiFi": true,
+        "Ethernet": true,
+        "Bluetooth": false
       },
       "ScreenInformations": {
         "Frequency": "60 Hz",
-        "Resolution": "3840 x 2160 Pixels",
-        "ScreenSize": "50",
-        "ScreenTechnology": "4K UHD"
+        "Resolution": "1366 x 768 Pixels",
+        "ScreenSize": "32",
+        "ScreenTechnology": "HD"
       },
       "Others": {
-        "OperationSystem": "Google TV",
+        "OperationSystem": "Roku OS",
         "Color": "Black",
-        "Weight": "12,5 Kg"
+        "Weight": "5,6 Kg"
       }
     }
   }
