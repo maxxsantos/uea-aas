@@ -8,8 +8,7 @@
         }
       ],
       "ManufacturerArticleNumber": "50PUG7408/78",
-      "ManufacturerOrderCode": "EEA-EX-200-S/47-Q3",
-      "ProductImage": "NON_EMPTY_VALUE"
+      "ManufacturerOrderCode": "EEA-EX-200-S/47-Q3"
     },
     "TechnicalProperties": {
       "Dimentions": {
@@ -20,7 +19,7 @@
       "Connections": {
         "HDMI": 3,
         "USB": 2,
-        "RF": 1,
+        "RF": "ISDB-T",
         "WiFi": true,
         "Ethernet": true,
         "Bluetooth": true

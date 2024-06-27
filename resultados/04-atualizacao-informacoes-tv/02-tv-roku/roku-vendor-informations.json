@@ -22,25 +22,25 @@
             "br": "\u002B551637112200"
           }
         ]
-      }
-    },
-    "Email": {
-      "EmailAddress": "b2b@magazineluiza.com.br"
-    },
-    "Street": [
-      {
-        "br": "Voluntarios Da Franca, 1465"
-      }
-    ],
-    "Zipcode": [
-      {
-        "br": "14400-902"
-      }
-    ],
-    "StateCounty": [
-      {
-        "br": "S\u00E3o Paulo"
-      }
-    ]
+      },
+      "Email": {
+        "EmailAddress": "b2b@magazineluiza.com.br"
+      },
+      "Street": [
+        {
+          "br": "Voluntarios Da Franca, 1465"
+        }
+      ],
+      "Zipcode": [
+        {
+          "br": "14400-902"
+        }
+      ],
+      "StateCounty": [
+        {
+          "br": "S\u00E3o Paulo"
+        }
+      ]
+    }
   }
 }

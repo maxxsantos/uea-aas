@@ -8,7 +8,7 @@ from consolemenu.items import *
 
 broker = 'localhost'
 port = 1883
-product_id = "1591_1252_6042_3233"
+product_id = "8002_1252_6042_1372"
 # Generate a Client ID with the publish prefix.
 client_id = f'publish-{random.randint(0, 1000)}'
 username = 'user1'
