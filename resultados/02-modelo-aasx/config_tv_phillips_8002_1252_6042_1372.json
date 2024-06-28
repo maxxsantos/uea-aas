@@ -2,909 +2,749 @@
     "core": {
         "requestHandlerThreadPoolSize": 2
     },
-    "endpoints": [ 
+    "endpoints": [
         {
             "@class": "de.fraunhofer.iosb.ilt.faaast.service.endpoint.opcua.OpcUaEndpoint",
-            "tcpPort" : 18123,
-            "secondsTillShutdown" : 5,
-            "discoveryServerUrl" : "opc.tcp://localhost:4840",
-            "userMap" : {
-            "user1" : "secret"
+            "tcpPort": 18123,
+            "secondsTillShutdown": 5,
+            "discoveryServerUrl": "opc.tcp://localhost:4840",
+            "userMap": {
+                "user1": "secret"
             },
-            "serverCertificateBasePath" : "PKI/CA",
-            "userCertificateBasePath" : "USERS_PKI/CA",
-            "supportedSecurityPolicies" : [ "NONE", "BASIC256SHA256", "AES128_SHA256_RSAOAEP" ],
-            "supportedAuthentications" : [ "Anonymous", "UserName" ]
+            "serverCertificateBasePath": "PKI/CA",
+            "userCertificateBasePath": "USERS_PKI/CA",
+            "supportedSecurityPolicies": [
+                "NONE",
+                "BASIC256SHA256",
+                "AES128_SHA256_RSAOAEP"
+            ],
+            "supportedAuthentications": [
+                "Anonymous",
+                "UserName"
+            ]
         },
         {
             "@class": "de.fraunhofer.iosb.ilt.faaast.service.endpoint.http.HttpEndpoint",
             "port": 5051,
             "corsEnabled": true,
-	        "sniEnabled": true
+            "sniEnabled": true
         }
     ],
-
-   "assetConnections": [
-    {
-        "@class": "de.fraunhofer.iosb.ilt.faaast.service.assetconnection.mqtt.MqttAssetConnection",
-        "serverUri": "tcp://localhost:1883",
-        "username": "user1",
-        "password": "12345",
-        "subscriptionProviders":
+    "assetConnections": [
         {
-
-            "[ModelRef](Submodel)https://admin-shell.io/idta/SubmodelTemplate/DigitalNameplate/2/0, (Property)URIOfTheProduct":
-            {
-                "format": "JSON",
-                "topic": "8002_1252_6042_1372/received/digital_nameplate",
-                "query": "$.DigitalNameplate.URIOfTheProduct"
+            "@class": "de.fraunhofer.iosb.ilt.faaast.service.assetconnection.mqtt.MqttAssetConnection",
+            "serverUri": "tcp://localhost:1883",
+            "username": "user1",
+            "password": "12345",
+            "subscriptionProviders": {
+                "[ModelRef](Submodel)https://admin-shell.io/idta/SubmodelTemplate/DigitalNameplate/2/0, (Property)URIOfTheProduct": {
+                    "format": "JSON",
+                    "topic": "8002_1252_6042_1372/received/digital_nameplate",
+                    "query": "$.DigitalNameplate.URIOfTheProduct"
+                }
+            }
+        },
+        {
+            "@class": "de.fraunhofer.iosb.ilt.faaast.service.assetconnection.mqtt.MqttAssetConnection",
+            "serverUri": "tcp://localhost:1883",
+            "username": "user1",
+            "password": "12345",
+            "subscriptionProviders": {
+                "[ModelRef](Submodel)https://admin-shell.io/idta/SubmodelTemplate/DigitalNameplate/2/0, (MultiLanguageProperty)ManufacturerName": {
+                    "format": "JSON",
+                    "topic": "8002_1252_6042_1372/received/digital_nameplate",
+                    "query": "$.DigitalNameplate.ManufacturerName"
+                }
+            }
+        },
+        {
+            "@class": "de.fraunhofer.iosb.ilt.faaast.service.assetconnection.mqtt.MqttAssetConnection",
+            "serverUri": "tcp://localhost:1883",
+            "username": "user1",
+            "password": "12345",
+            "subscriptionProviders": {
+                "[ModelRef](Submodel)https://admin-shell.io/idta/SubmodelTemplate/DigitalNameplate/2/0, (MultiLanguageProperty)ManufacturerProductDesignation": {
+                    "format": "JSON",
+                    "topic": "8002_1252_6042_1372/received/digital_nameplate",
+                    "query": "$.DigitalNameplate.ManufacturerProductDesignation"
+                }
+            }
+        },
+        {
+            "@class": "de.fraunhofer.iosb.ilt.faaast.service.assetconnection.mqtt.MqttAssetConnection",
+            "serverUri": "tcp://localhost:1883",
+            "username": "user1",
+            "password": "12345",
+            "subscriptionProviders": {
+                "[ModelRef](Submodel)https://admin-shell.io/idta/SubmodelTemplate/DigitalNameplate/2/0, (SubmodelElementCollection)ContactInformation, (MultiLanguageProperty)NationalCode": {
+                    "format": "JSON",
+                    "topic": "8002_1252_6042_1372/received/digital_nameplate",
+                    "query": "$.DigitalNameplate.ContactInformation.NationalCode"
+                }
+            }
+        },
+        {
+            "@class": "de.fraunhofer.iosb.ilt.faaast.service.assetconnection.mqtt.MqttAssetConnection",
+            "serverUri": "tcp://localhost:1883",
+            "username": "user1",
+            "password": "12345",
+            "subscriptionProviders": {
+                "[ModelRef](Submodel)https://admin-shell.io/idta/SubmodelTemplate/DigitalNameplate/2/0, (SubmodelElementCollection)ContactInformation, (MultiLanguageProperty)CityTown": {
+                    "format": "JSON",
+                    "topic": "8002_1252_6042_1372/received/digital_nameplate",
+                    "query": "$.DigitalNameplate.ContactInformation.CityTown"
+                }
+            }
+        },
+        {
+            "@class": "de.fraunhofer.iosb.ilt.faaast.service.assetconnection.mqtt.MqttAssetConnection",
+            "serverUri": "tcp://localhost:1883",
+            "username": "user1",
+            "password": "12345",
+            "subscriptionProviders": {
+                "[ModelRef](Submodel)https://admin-shell.io/idta/SubmodelTemplate/DigitalNameplate/2/0, (SubmodelElementCollection)ContactInformation, (MultiLanguageProperty)Company": {
+                    "format": "JSON",
+                    "topic": "8002_1252_6042_1372/received/digital_nameplate",
+                    "query": "$.DigitalNameplate.ContactInformation.Company"
+                }
+            }
+        },
+        {
+            "@class": "de.fraunhofer.iosb.ilt.faaast.service.assetconnection.mqtt.MqttAssetConnection",
+            "serverUri": "tcp://localhost:1883",
+            "username": "user1",
+            "password": "12345",
+            "subscriptionProviders": {
+                "[ModelRef](Submodel)https://admin-shell.io/idta/SubmodelTemplate/DigitalNameplate/2/0, (SubmodelElementCollection)ContactInformation, (SubmodelElementCollection)Phone, (MultiLanguageProperty)TelephoneNumber": {
+                    "format": "JSON",
+                    "topic": "8002_1252_6042_1372/received/digital_nameplate",
+                    "query": "$.DigitalNameplate.ContactInformation.Phone.TelephoneNumber"
+                }
+            }
+        },
+        {
+            "@class": "de.fraunhofer.iosb.ilt.faaast.service.assetconnection.mqtt.MqttAssetConnection",
+            "serverUri": "tcp://localhost:1883",
+            "username": "user1",
+            "password": "12345",
+            "subscriptionProviders": {
+                "[ModelRef](Submodel)https://admin-shell.io/idta/SubmodelTemplate/DigitalNameplate/2/0, (SubmodelElementCollection)ContactInformation, (SubmodelElementCollection)Email, (Property)EmailAddress": {
+                    "format": "JSON",
+                    "topic": "8002_1252_6042_1372/received/digital_nameplate",
+                    "query": "$.DigitalNameplate.ContactInformation.Email[0].EmailAddress"
+                }
+            }
+        },
+        {
+            "@class": "de.fraunhofer.iosb.ilt.faaast.service.assetconnection.mqtt.MqttAssetConnection",
+            "serverUri": "tcp://localhost:1883",
+            "username": "user1",
+            "password": "12345",
+            "subscriptionProviders": {
+                "[ModelRef](Submodel)https://admin-shell.io/idta/SubmodelTemplate/DigitalNameplate/2/0, (SubmodelElementCollection)ContactInformation, (MultiLanguageProperty)Street": {
+                    "format": "JSON",
+                    "topic": "8002_1252_6042_1372/received/digital_nameplate",
+                    "query": "$.DigitalNameplate.ContactInformation.Street"
+                }
+            }
+        },
+        {
+            "@class": "de.fraunhofer.iosb.ilt.faaast.service.assetconnection.mqtt.MqttAssetConnection",
+            "serverUri": "tcp://localhost:1883",
+            "username": "user1",
+            "password": "12345",
+            "subscriptionProviders": {
+                "[ModelRef](Submodel)https://admin-shell.io/idta/SubmodelTemplate/DigitalNameplate/2/0, (SubmodelElementCollection)ContactInformation, (MultiLanguageProperty)Zipcode": {
+                    "format": "JSON",
+                    "topic": "8002_1252_6042_1372/received/digital_nameplate",
+                    "query": "$.DigitalNameplate.ContactInformation.Zipcode"
+                }
+            }
+        },
+        {
+            "@class": "de.fraunhofer.iosb.ilt.faaast.service.assetconnection.mqtt.MqttAssetConnection",
+            "serverUri": "tcp://localhost:1883",
+            "username": "user1",
+            "password": "12345",
+            "subscriptionProviders": {
+                "[ModelRef](Submodel)https://admin-shell.io/idta/SubmodelTemplate/DigitalNameplate/2/0, (SubmodelElementCollection)ContactInformation, (MultiLanguageProperty)StateCounty": {
+                    "format": "JSON",
+                    "topic": "8002_1252_6042_1372/received/digital_nameplate",
+                    "query": "$.DigitalNameplate.ContactInformation.StateCounty"
+                }
+            }
+        },
+        {
+            "@class": "de.fraunhofer.iosb.ilt.faaast.service.assetconnection.mqtt.MqttAssetConnection",
+            "serverUri": "tcp://localhost:1883",
+            "username": "user1",
+            "password": "12345",
+            "subscriptionProviders": {
+                "[ModelRef](Submodel)https://admin-shell.io/idta/SubmodelTemplate/DigitalNameplate/2/0, (Property)SerialNumber": {
+                    "format": "JSON",
+                    "topic": "8002_1252_6042_1372/received/digital_nameplate",
+                    "query": "$.DigitalNameplate.SerialNumber"
+                }
+            }
+        },
+        {
+            "@class": "de.fraunhofer.iosb.ilt.faaast.service.assetconnection.mqtt.MqttAssetConnection",
+            "serverUri": "tcp://localhost:1883",
+            "username": "user1",
+            "password": "12345",
+            "subscriptionProviders": {
+                "[ModelRef](Submodel)https://admin-shell.io/idta/SubmodelTemplate/DigitalNameplate/2/0, (Property)YearOfConstruction": {
+                    "format": "JSON",
+                    "topic": "8002_1252_6042_1372/received/digital_nameplate",
+                    "query": "$.DigitalNameplate.YearOfConstruction"
+                }
+            }
+        },
+        {
+            "@class": "de.fraunhofer.iosb.ilt.faaast.service.assetconnection.mqtt.MqttAssetConnection",
+            "serverUri": "tcp://localhost:1883",
+            "username": "user1",
+            "password": "12345",
+            "subscriptionProviders": {
+                "[ModelRef](Submodel)https://admin-shell.io/idta/SubmodelTemplate/DigitalNameplate/2/0, (Property)DateOfManufacture": {
+                    "format": "JSON",
+                    "topic": "8002_1252_6042_1372/received/digital_nameplate",
+                    "query": "$.DigitalNameplate.DateOfManufacture"
+                }
+            }
+        },
+        {
+            "@class": "de.fraunhofer.iosb.ilt.faaast.service.assetconnection.mqtt.MqttAssetConnection",
+            "serverUri": "tcp://localhost:1883",
+            "username": "user1",
+            "password": "12345",
+            "subscriptionProviders": {
+                "[ModelRef](Submodel)https://admin-shell.io/idta/SubmodelTemplate/DigitalNameplate/2/0, (MultiLanguageProperty)HardwareVersion": {
+                    "format": "JSON",
+                    "topic": "8002_1252_6042_1372/received/digital_nameplate",
+                    "query": "$.DigitalNameplate.HardwareVersion"
+                }
+            }
+        },
+        {
+            "@class": "de.fraunhofer.iosb.ilt.faaast.service.assetconnection.mqtt.MqttAssetConnection",
+            "serverUri": "tcp://localhost:1883",
+            "username": "user1",
+            "password": "12345",
+            "subscriptionProviders": {
+                "[ModelRef](Submodel)https://admin-shell.io/idta/SubmodelTemplate/DigitalNameplate/2/0, (MultiLanguageProperty)FirmwareVersion": {
+                    "format": "JSON",
+                    "topic": "8002_1252_6042_1372/received/digital_nameplate",
+                    "query": "$.DigitalNameplate.FirmwareVersion"
+                }
+            }
+        },
+        {
+            "@class": "de.fraunhofer.iosb.ilt.faaast.service.assetconnection.mqtt.MqttAssetConnection",
+            "serverUri": "tcp://localhost:1883",
+            "username": "user1",
+            "password": "12345",
+            "subscriptionProviders": {
+                "[ModelRef](Submodel)https://admin-shell.io/idta/SubmodelTemplate/DigitalNameplate/2/0, (MultiLanguageProperty)SoftwareVersion": {
+                    "format": "JSON",
+                    "topic": "8002_1252_6042_1372/received/digital_nameplate",
+                    "query": "$.DigitalNameplate.SoftwareVersion"
+                }
+            }
+        },
+        {
+            "@class": "de.fraunhofer.iosb.ilt.faaast.service.assetconnection.mqtt.MqttAssetConnection",
+            "serverUri": "tcp://localhost:1883",
+            "username": "user1",
+            "password": "12345",
+            "subscriptionProviders": {
+                "[ModelRef](Submodel)https://admin-shell.io/idta/SubmodelTemplate/DigitalNameplate/2/0, (Property)CountryOfOrigin": {
+                    "format": "JSON",
+                    "topic": "8002_1252_6042_1372/received/digital_nameplate",
+                    "query": "$.DigitalNameplate.CountryOfOrigin"
+                }
+            }
+        },
+        {
+            "@class": "de.fraunhofer.iosb.ilt.faaast.service.assetconnection.mqtt.MqttAssetConnection",
+            "serverUri": "tcp://localhost:1883",
+            "username": "user1",
+            "password": "12345",
+            "subscriptionProviders": {
+                "[ModelRef](Submodel)https://admin-shell.io/ZVEI/TechnicalData/Submodel/1/2, (SubmodelElementCollection)GeneralInformation, (Property)ManufacturerName": {
+                    "format": "JSON",
+                    "topic": "8002_1252_6042_1372/received/technical_data",
+                    "query": "$.TechnicalData.GeneralInformation.ManufacturerName"
+                }
+            }
+        },
+        {
+            "@class": "de.fraunhofer.iosb.ilt.faaast.service.assetconnection.mqtt.MqttAssetConnection",
+            "serverUri": "tcp://localhost:1883",
+            "username": "user1",
+            "password": "12345",
+            "subscriptionProviders": {
+                "[ModelRef](Submodel)https://admin-shell.io/ZVEI/TechnicalData/Submodel/1/2, (SubmodelElementCollection)GeneralInformation, (MultiLanguageProperty)ManufacturerProductDesignation": {
+                    "format": "JSON",
+                    "topic": "8002_1252_6042_1372/received/technical_data",
+                    "query": "$.TechnicalData.GeneralInformation.ManufacturerProductDesignation"
+                }
+            }
+        },
+        {
+            "@class": "de.fraunhofer.iosb.ilt.faaast.service.assetconnection.mqtt.MqttAssetConnection",
+            "serverUri": "tcp://localhost:1883",
+            "username": "user1",
+            "password": "12345",
+            "subscriptionProviders": {
+                "[ModelRef](Submodel)https://admin-shell.io/ZVEI/TechnicalData/Submodel/1/2, (SubmodelElementCollection)GeneralInformation, (Property)ManufacturerArticleNumber": {
+                    "format": "JSON",
+                    "topic": "8002_1252_6042_1372/received/technical_data",
+                    "query": "$.TechnicalData.GeneralInformation.ManufacturerArticleNumber"
+                }
+            }
+        },
+        {
+            "@class": "de.fraunhofer.iosb.ilt.faaast.service.assetconnection.mqtt.MqttAssetConnection",
+            "serverUri": "tcp://localhost:1883",
+            "username": "user1",
+            "password": "12345",
+            "subscriptionProviders": {
+                "[ModelRef](Submodel)https://admin-shell.io/ZVEI/TechnicalData/Submodel/1/2, (SubmodelElementCollection)GeneralInformation, (Property)ManufacturerOrderCode": {
+                    "format": "JSON",
+                    "topic": "8002_1252_6042_1372/received/technical_data",
+                    "query": "$.TechnicalData.GeneralInformation.ManufacturerOrderCode"
+                }
+            }
+        },
+        {
+            "@class": "de.fraunhofer.iosb.ilt.faaast.service.assetconnection.mqtt.MqttAssetConnection",
+            "serverUri": "tcp://localhost:1883",
+            "username": "user1",
+            "password": "12345",
+            "subscriptionProviders": {
+                "[ModelRef](Submodel)https://admin-shell.io/ZVEI/TechnicalData/Submodel/1/2, (SubmodelElementCollection)TechnicalProperties, (SubmodelElementCollection)Dimentions, (Property)Width": {
+                    "format": "JSON",
+                    "topic": "8002_1252_6042_1372/received/technical_data",
+                    "query": "$.TechnicalData.TechnicalProperties.Dimentions.Width"
+                }
+            }
+        },
+        {
+            "@class": "de.fraunhofer.iosb.ilt.faaast.service.assetconnection.mqtt.MqttAssetConnection",
+            "serverUri": "tcp://localhost:1883",
+            "username": "user1",
+            "password": "12345",
+            "subscriptionProviders": {
+                "[ModelRef](Submodel)https://admin-shell.io/ZVEI/TechnicalData/Submodel/1/2, (SubmodelElementCollection)TechnicalProperties, (SubmodelElementCollection)Dimentions, (Property)Height": {
+                    "format": "JSON",
+                    "topic": "8002_1252_6042_1372/received/technical_data",
+                    "query": "$.TechnicalData.TechnicalProperties.Dimentions.Height"
+                }
+            }
+        },
+        {
+            "@class": "de.fraunhofer.iosb.ilt.faaast.service.assetconnection.mqtt.MqttAssetConnection",
+            "serverUri": "tcp://localhost:1883",
+            "username": "user1",
+            "password": "12345",
+            "subscriptionProviders": {
+                "[ModelRef](Submodel)https://admin-shell.io/ZVEI/TechnicalData/Submodel/1/2, (SubmodelElementCollection)TechnicalProperties, (SubmodelElementCollection)Dimentions, (Property)Depth": {
+                    "format": "JSON",
+                    "topic": "8002_1252_6042_1372/received/technical_data",
+                    "query": "$.TechnicalData.TechnicalProperties.Dimentions.Depth"
+                }
+            }
+        },
+        {
+            "@class": "de.fraunhofer.iosb.ilt.faaast.service.assetconnection.mqtt.MqttAssetConnection",
+            "serverUri": "tcp://localhost:1883",
+            "username": "user1",
+            "password": "12345",
+            "subscriptionProviders": {
+                "[ModelRef](Submodel)https://admin-shell.io/ZVEI/TechnicalData/Submodel/1/2, (SubmodelElementCollection)TechnicalProperties, (SubmodelElementCollection)Connections, (Property)HDMI": {
+                    "format": "JSON",
+                    "topic": "8002_1252_6042_1372/received/technical_data",
+                    "query": "$.TechnicalData.TechnicalProperties.Connections.HDMI"
+                }
+            }
+        },
+        {
+            "@class": "de.fraunhofer.iosb.ilt.faaast.service.assetconnection.mqtt.MqttAssetConnection",
+            "serverUri": "tcp://localhost:1883",
+            "username": "user1",
+            "password": "12345",
+            "subscriptionProviders": {
+                "[ModelRef](Submodel)https://admin-shell.io/ZVEI/TechnicalData/Submodel/1/2, (SubmodelElementCollection)TechnicalProperties, (SubmodelElementCollection)Connections, (Property)USB": {
+                    "format": "JSON",
+                    "topic": "8002_1252_6042_1372/received/technical_data",
+                    "query": "$.TechnicalData.TechnicalProperties.Connections.USB"
+                }
+            }
+        },
+        {
+            "@class": "de.fraunhofer.iosb.ilt.faaast.service.assetconnection.mqtt.MqttAssetConnection",
+            "serverUri": "tcp://localhost:1883",
+            "username": "user1",
+            "password": "12345",
+            "subscriptionProviders": {
+                "[ModelRef](Submodel)https://admin-shell.io/ZVEI/TechnicalData/Submodel/1/2, (SubmodelElementCollection)TechnicalProperties, (SubmodelElementCollection)Connections, (Property)RF": {
+                    "format": "JSON",
+                    "topic": "8002_1252_6042_1372/received/technical_data",
+                    "query": "$.TechnicalData.TechnicalProperties.Connections.RF"
+                }
+            }
+        },
+        {
+            "@class": "de.fraunhofer.iosb.ilt.faaast.service.assetconnection.mqtt.MqttAssetConnection",
+            "serverUri": "tcp://localhost:1883",
+            "username": "user1",
+            "password": "12345",
+            "subscriptionProviders": {
+                "[ModelRef](Submodel)https://admin-shell.io/ZVEI/TechnicalData/Submodel/1/2, (SubmodelElementCollection)TechnicalProperties, (SubmodelElementCollection)Connections, (Property)WiFi": {
+                    "format": "JSON",
+                    "topic": "8002_1252_6042_1372/received/technical_data",
+                    "query": "$.TechnicalData.TechnicalProperties.Connections.WiFi"
+                }
+            }
+        },
+        {
+            "@class": "de.fraunhofer.iosb.ilt.faaast.service.assetconnection.mqtt.MqttAssetConnection",
+            "serverUri": "tcp://localhost:1883",
+            "username": "user1",
+            "password": "12345",
+            "subscriptionProviders": {
+                "[ModelRef](Submodel)https://admin-shell.io/ZVEI/TechnicalData/Submodel/1/2, (SubmodelElementCollection)TechnicalProperties, (SubmodelElementCollection)Connections, (Property)Ethernet": {
+                    "format": "JSON",
+                    "topic": "8002_1252_6042_1372/received/technical_data",
+                    "query": "$.TechnicalData.TechnicalProperties.Connections.Ethernet"
+                }
+            }
+        },
+        {
+            "@class": "de.fraunhofer.iosb.ilt.faaast.service.assetconnection.mqtt.MqttAssetConnection",
+            "serverUri": "tcp://localhost:1883",
+            "username": "user1",
+            "password": "12345",
+            "subscriptionProviders": {
+                "[ModelRef](Submodel)https://admin-shell.io/ZVEI/TechnicalData/Submodel/1/2, (SubmodelElementCollection)TechnicalProperties, (SubmodelElementCollection)Connections, (Property)Bluetooth": {
+                    "format": "JSON",
+                    "topic": "8002_1252_6042_1372/received/technical_data",
+                    "query": "$.TechnicalData.TechnicalProperties.Connections.Bluetooth"
+                }
+            }
+        },
+        {
+            "@class": "de.fraunhofer.iosb.ilt.faaast.service.assetconnection.mqtt.MqttAssetConnection",
+            "serverUri": "tcp://localhost:1883",
+            "username": "user1",
+            "password": "12345",
+            "subscriptionProviders": {
+                "[ModelRef](Submodel)https://admin-shell.io/ZVEI/TechnicalData/Submodel/1/2, (SubmodelElementCollection)TechnicalProperties, (SubmodelElementCollection)ScreenInformations, (Property)Frequency": {
+                    "format": "JSON",
+                    "topic": "8002_1252_6042_1372/received/technical_data",
+                    "query": "$.TechnicalData.TechnicalProperties.ScreenInformations.Frequency"
+                }
+            }
+        },
+        {
+            "@class": "de.fraunhofer.iosb.ilt.faaast.service.assetconnection.mqtt.MqttAssetConnection",
+            "serverUri": "tcp://localhost:1883",
+            "username": "user1",
+            "password": "12345",
+            "subscriptionProviders": {
+                "[ModelRef](Submodel)https://admin-shell.io/ZVEI/TechnicalData/Submodel/1/2, (SubmodelElementCollection)TechnicalProperties, (SubmodelElementCollection)ScreenInformations, (Property)Resolution": {
+                    "format": "JSON",
+                    "topic": "8002_1252_6042_1372/received/technical_data",
+                    "query": "$.TechnicalData.TechnicalProperties.ScreenInformations.Resolution"
+                }
+            }
+        },
+        {
+            "@class": "de.fraunhofer.iosb.ilt.faaast.service.assetconnection.mqtt.MqttAssetConnection",
+            "serverUri": "tcp://localhost:1883",
+            "username": "user1",
+            "password": "12345",
+            "subscriptionProviders": {
+                "[ModelRef](Submodel)https://admin-shell.io/ZVEI/TechnicalData/Submodel/1/2, (SubmodelElementCollection)TechnicalProperties, (SubmodelElementCollection)ScreenInformations, (Property)ScreenSize": {
+                    "format": "JSON",
+                    "topic": "8002_1252_6042_1372/received/technical_data",
+                    "query": "$.TechnicalData.TechnicalProperties.ScreenInformations.ScreenSize"
+                }
+            }
+        },
+        {
+            "@class": "de.fraunhofer.iosb.ilt.faaast.service.assetconnection.mqtt.MqttAssetConnection",
+            "serverUri": "tcp://localhost:1883",
+            "username": "user1",
+            "password": "12345",
+            "subscriptionProviders": {
+                "[ModelRef](Submodel)https://admin-shell.io/ZVEI/TechnicalData/Submodel/1/2, (SubmodelElementCollection)TechnicalProperties, (SubmodelElementCollection)ScreenInformations, (Property)ScreenTechnology": {
+                    "format": "JSON",
+                    "topic": "8002_1252_6042_1372/received/technical_data",
+                    "query": "$.TechnicalData.TechnicalProperties.ScreenInformations.ScreenTechnology"
+                }
+            }
+        },
+        {
+            "@class": "de.fraunhofer.iosb.ilt.faaast.service.assetconnection.mqtt.MqttAssetConnection",
+            "serverUri": "tcp://localhost:1883",
+            "username": "user1",
+            "password": "12345",
+            "subscriptionProviders": {
+                "[ModelRef](Submodel)https://admin-shell.io/ZVEI/TechnicalData/Submodel/1/2, (SubmodelElementCollection)TechnicalProperties, (SubmodelElementCollection)Others, (Property)OperationSystem": {
+                    "format": "JSON",
+                    "topic": "8002_1252_6042_1372/received/technical_data",
+                    "query": "$.TechnicalData.TechnicalProperties.Others.OperationSystem"
+                }
+            }
+        },
+        {
+            "@class": "de.fraunhofer.iosb.ilt.faaast.service.assetconnection.mqtt.MqttAssetConnection",
+            "serverUri": "tcp://localhost:1883",
+            "username": "user1",
+            "password": "12345",
+            "subscriptionProviders": {
+                "[ModelRef](Submodel)https://admin-shell.io/ZVEI/TechnicalData/Submodel/1/2, (SubmodelElementCollection)TechnicalProperties, (SubmodelElementCollection)Others, (Property)Color": {
+                    "format": "JSON",
+                    "topic": "8002_1252_6042_1372/received/technical_data",
+                    "query": "$.TechnicalData.TechnicalProperties.Others.Color"
+                }
+            }
+        },
+        {
+            "@class": "de.fraunhofer.iosb.ilt.faaast.service.assetconnection.mqtt.MqttAssetConnection",
+            "serverUri": "tcp://localhost:1883",
+            "username": "user1",
+            "password": "12345",
+            "subscriptionProviders": {
+                "[ModelRef](Submodel)https://admin-shell.io/ZVEI/TechnicalData/Submodel/1/2, (SubmodelElementCollection)TechnicalProperties, (SubmodelElementCollection)Others, (Property)Weight": {
+                    "format": "JSON",
+                    "topic": "8002_1252_6042_1372/received/technical_data",
+                    "query": "$.TechnicalData.TechnicalProperties.Others.Weight"
+                }
+            }
+        },
+        {
+            "@class": "de.fraunhofer.iosb.ilt.faaast.service.assetconnection.mqtt.MqttAssetConnection",
+            "serverUri": "tcp://localhost:1883",
+            "username": "user1",
+            "password": "12345",
+            "subscriptionProviders": {
+                "[ModelRef](Submodel)https://admin-shell.io/idta/SubmodelTemplate/ContactInformation/1/0, (SubmodelElementCollection)ContactInformation, (MultiLanguageProperty)CityTown": {
+                    "format": "JSON",
+                    "topic": "8002_1252_6042_1372/received/vendor_informations",
+                    "query": "$.VendorInformations.ContactInformation.CityTown"
+                }
+            }
+        },
+        {
+            "@class": "de.fraunhofer.iosb.ilt.faaast.service.assetconnection.mqtt.MqttAssetConnection",
+            "serverUri": "tcp://localhost:1883",
+            "username": "user1",
+            "password": "12345",
+            "subscriptionProviders": {
+                "[ModelRef](Submodel)https://admin-shell.io/idta/SubmodelTemplate/ContactInformation/1/0, (SubmodelElementCollection)ContactInformation, (MultiLanguageProperty)Company": {
+                    "format": "JSON",
+                    "topic": "8002_1252_6042_1372/received/vendor_informations",
+                    "query": "$.VendorInformations.ContactInformation.Company"
+                }
+            }
+        },
+        {
+            "@class": "de.fraunhofer.iosb.ilt.faaast.service.assetconnection.mqtt.MqttAssetConnection",
+            "serverUri": "tcp://localhost:1883",
+            "username": "user1",
+            "password": "12345",
+            "subscriptionProviders": {
+                "[ModelRef](Submodel)https://admin-shell.io/idta/SubmodelTemplate/ContactInformation/1/0, (SubmodelElementCollection)ContactInformation, (MultiLanguageProperty)Department": {
+                    "format": "JSON",
+                    "topic": "8002_1252_6042_1372/received/vendor_informations",
+                    "query": "$.VendorInformations.ContactInformation.Department"
+                }
+            }
+        },
+        {
+            "@class": "de.fraunhofer.iosb.ilt.faaast.service.assetconnection.mqtt.MqttAssetConnection",
+            "serverUri": "tcp://localhost:1883",
+            "username": "user1",
+            "password": "12345",
+            "subscriptionProviders": {
+                "[ModelRef](Submodel)https://admin-shell.io/idta/SubmodelTemplate/ContactInformation/1/0, (SubmodelElementCollection)ContactInformation, (SubmodelElementCollection)Phone, (MultiLanguageProperty)TelephoneNumber": {
+                    "format": "JSON",
+                    "topic": "8002_1252_6042_1372/received/vendor_informations",
+                    "query": "$.VendorInformations.ContactInformation.Phone.TelephoneNumber"
+                }
+            }
+        },
+        {
+            "@class": "de.fraunhofer.iosb.ilt.faaast.service.assetconnection.mqtt.MqttAssetConnection",
+            "serverUri": "tcp://localhost:1883",
+            "username": "user1",
+            "password": "12345",
+            "subscriptionProviders": {
+                "[ModelRef](Submodel)https://admin-shell.io/idta/SubmodelTemplate/ContactInformation/1/0, (SubmodelElementCollection)ContactInformation, (SubmodelElementCollection)Email, (Property)EmailAddress": {
+                    "format": "JSON",
+                    "topic": "8002_1252_6042_1372/received/vendor_informations",
+                    "query": "$.VendorInformations.ContactInformation.Email.EmailAddress"
+                }
+            }
+        },
+        {
+            "@class": "de.fraunhofer.iosb.ilt.faaast.service.assetconnection.mqtt.MqttAssetConnection",
+            "serverUri": "tcp://localhost:1883",
+            "username": "user1",
+            "password": "12345",
+            "subscriptionProviders": {
+                "[ModelRef](Submodel)https://admin-shell.io/idta/SubmodelTemplate/ContactInformation/1/0, (SubmodelElementCollection)ContactInformation, (MultiLanguageProperty)Street": {
+                    "format": "JSON",
+                    "topic": "8002_1252_6042_1372/received/vendor_informations",
+                    "query": "$.VendorInformations.ContactInformation.Street"
+                }
+            }
+        },
+        {
+            "@class": "de.fraunhofer.iosb.ilt.faaast.service.assetconnection.mqtt.MqttAssetConnection",
+            "serverUri": "tcp://localhost:1883",
+            "username": "user1",
+            "password": "12345",
+            "subscriptionProviders": {
+                "[ModelRef](Submodel)https://admin-shell.io/idta/SubmodelTemplate/ContactInformation/1/0, (SubmodelElementCollection)ContactInformation, (MultiLanguageProperty)Zipcode": {
+                    "format": "JSON",
+                    "topic": "8002_1252_6042_1372/received/vendor_informations",
+                    "query": "$.VendorInformations.ContactInformation.Zipcode"
+                }
+            }
+        },
+        {
+            "@class": "de.fraunhofer.iosb.ilt.faaast.service.assetconnection.mqtt.MqttAssetConnection",
+            "serverUri": "tcp://localhost:1883",
+            "username": "user1",
+            "password": "12345",
+            "subscriptionProviders": {
+                "[ModelRef](Submodel)https://admin-shell.io/idta/SubmodelTemplate/ContactInformation/1/0, (SubmodelElementCollection)ContactInformation, (MultiLanguageProperty)StateCounty": {
+                    "format": "JSON",
+                    "topic": "8002_1252_6042_1372/received/vendor_informations",
+                    "query": "$.VendorInformations.ContactInformation.StateCounty"
+                }
+            }
+        },
+        {
+            "@class": "de.fraunhofer.iosb.ilt.faaast.service.assetconnection.mqtt.MqttAssetConnection",
+            "serverUri": "tcp://localhost:1883",
+            "username": "user1",
+            "password": "12345",
+            "subscriptionProviders": {
+                "[ModelRef](Submodel)https://tpv-tech.com.br/ids/sm/profile/3561_1252_6042_9723, (SubmodelElementCollection)Streaming, (Property)AccumulatedTime": {
+                    "format": "JSON",
+                    "topic": "8002_1252_6042_1372/received/profile",
+                    "query": "$.Profile.Streaming.AccumulatedTime"
+                }
+            }
+        },
+        {
+            "@class": "de.fraunhofer.iosb.ilt.faaast.service.assetconnection.mqtt.MqttAssetConnection",
+            "serverUri": "tcp://localhost:1883",
+            "username": "user1",
+            "password": "12345",
+            "subscriptionProviders": {
+                "[ModelRef](Submodel)https://tpv-tech.com.br/ids/sm/profile/3561_1252_6042_9723, (SubmodelElementCollection)Streaming, (Property)BeginTime": {
+                    "format": "JSON",
+                    "topic": "8002_1252_6042_1372/received/profile",
+                    "query": "$.Profile.Streaming.BeginTime"
+                }
+            }
+        },
+        {
+            "@class": "de.fraunhofer.iosb.ilt.faaast.service.assetconnection.mqtt.MqttAssetConnection",
+            "serverUri": "tcp://localhost:1883",
+            "username": "user1",
+            "password": "12345",
+            "subscriptionProviders": {
+                "[ModelRef](Submodel)https://tpv-tech.com.br/ids/sm/profile/3561_1252_6042_9723, (SubmodelElementCollection)Streaming, (Property)EndTime": {
+                    "format": "JSON",
+                    "topic": "8002_1252_6042_1372/received/profile",
+                    "query": "$.Profile.Streaming.EndTime"
+                }
+            }
+        },
+        {
+            "@class": "de.fraunhofer.iosb.ilt.faaast.service.assetconnection.mqtt.MqttAssetConnection",
+            "serverUri": "tcp://localhost:1883",
+            "username": "user1",
+            "password": "12345",
+            "subscriptionProviders": {
+                "[ModelRef](Submodel)https://tpv-tech.com.br/ids/sm/profile/3561_1252_6042_9723, (SubmodelElementCollection)LiveTV, (Property)AccumulatedTime": {
+                    "format": "JSON",
+                    "topic": "8002_1252_6042_1372/received/profile",
+                    "query": "$.Profile.LiveTV.AccumulatedTime"
+                }
+            }
+        },
+        {
+            "@class": "de.fraunhofer.iosb.ilt.faaast.service.assetconnection.mqtt.MqttAssetConnection",
+            "serverUri": "tcp://localhost:1883",
+            "username": "user1",
+            "password": "12345",
+            "subscriptionProviders": {
+                "[ModelRef](Submodel)https://tpv-tech.com.br/ids/sm/profile/3561_1252_6042_9723, (SubmodelElementCollection)LiveTV, (Property)BeginTime": {
+                    "format": "JSON",
+                    "topic": "8002_1252_6042_1372/received/profile",
+                    "query": "$.Profile.LiveTV.BeginTime"
+                }
+            }
+        },
+        {
+            "@class": "de.fraunhofer.iosb.ilt.faaast.service.assetconnection.mqtt.MqttAssetConnection",
+            "serverUri": "tcp://localhost:1883",
+            "username": "user1",
+            "password": "12345",
+            "subscriptionProviders": {
+                "[ModelRef](Submodel)https://tpv-tech.com.br/ids/sm/profile/3561_1252_6042_9723, (SubmodelElementCollection)LiveTV, (Property)EndTime": {
+                    "format": "JSON",
+                    "topic": "8002_1252_6042_1372/received/profile",
+                    "query": "$.Profile.LiveTV.EndTime"
+                }
+            }
+        },
+        {
+            "@class": "de.fraunhofer.iosb.ilt.faaast.service.assetconnection.mqtt.MqttAssetConnection",
+            "serverUri": "tcp://localhost:1883",
+            "username": "user1",
+            "password": "12345",
+            "subscriptionProviders": {
+                "[ModelRef](Submodel)https://tpv-tech.com.br/ids/sm/profile/3561_1252_6042_9723, (SubmodelElementCollection)InteractiveApplication, (Property)AccumulatedTime": {
+                    "format": "JSON",
+                    "topic": "8002_1252_6042_1372/received/profile",
+                    "query": "$.Profile.InteractiveApplication.AccumulatedTime"
+                }
+            }
+        },
+        {
+            "@class": "de.fraunhofer.iosb.ilt.faaast.service.assetconnection.mqtt.MqttAssetConnection",
+            "serverUri": "tcp://localhost:1883",
+            "username": "user1",
+            "password": "12345",
+            "subscriptionProviders": {
+                "[ModelRef](Submodel)https://tpv-tech.com.br/ids/sm/profile/3561_1252_6042_9723, (SubmodelElementCollection)InteractiveApplication, (Property)BeginTime": {
+                    "format": "JSON",
+                    "topic": "8002_1252_6042_1372/received/profile",
+                    "query": "$.Profile.InteractiveApplication.BeginTime"
+                }
+            }
+        },
+        {
+            "@class": "de.fraunhofer.iosb.ilt.faaast.service.assetconnection.mqtt.MqttAssetConnection",
+            "serverUri": "tcp://localhost:1883",
+            "username": "user1",
+            "password": "12345",
+            "subscriptionProviders": {
+                "[ModelRef](Submodel)https://tpv-tech.com.br/ids/sm/profile/3561_1252_6042_9723, (SubmodelElementCollection)InteractiveApplication, (Property)EndTime": {
+                    "format": "JSON",
+                    "topic": "8002_1252_6042_1372/received/profile",
+                    "query": "$.Profile.InteractiveApplication.EndTime"
+                }
             }
         }
-    },
-    {
-        "@class": "de.fraunhofer.iosb.ilt.faaast.service.assetconnection.mqtt.MqttAssetConnection",
-        "serverUri": "tcp://localhost:1883",
-        "username": "user1",
-        "password": "12345",
-        "subscriptionProviders":
-        {
-
-            "[ModelRef](Submodel)https://admin-shell.io/idta/SubmodelTemplate/DigitalNameplate/2/0, (MultiLanguageProperty)ManufacturerName":
-            {
-                "format": "JSON",
-                "topic": "8002_1252_6042_1372/received/digital_nameplate",
-                "query": "$.DigitalNameplate.ManufacturerName"
-            }
-        }
-    },
-    {
-        "@class": "de.fraunhofer.iosb.ilt.faaast.service.assetconnection.mqtt.MqttAssetConnection",
-        "serverUri": "tcp://localhost:1883",
-        "username": "user1",
-        "password": "12345",
-        "subscriptionProviders":
-        {
-
-            "[ModelRef](Submodel)https://admin-shell.io/idta/SubmodelTemplate/DigitalNameplate/2/0, (MultiLanguageProperty)ManufacturerProductDesignation":
-            {
-                "format": "JSON",
-                "topic": "8002_1252_6042_1372/received/digital_nameplate",
-                "query": "$.DigitalNameplate.ManufacturerProductDesignation"
-            }
-        }
-    },
-    {
-        "@class": "de.fraunhofer.iosb.ilt.faaast.service.assetconnection.mqtt.MqttAssetConnection",
-        "serverUri": "tcp://localhost:1883",
-        "username": "user1",
-        "password": "12345",
-        "subscriptionProviders":
-        {
-
-            "[ModelRef](Submodel)https://admin-shell.io/idta/SubmodelTemplate/DigitalNameplate/2/0, (SubmodelElementCollection)ContactInformation, (MultiLanguageProperty)NationalCode":
-            {
-                "format": "JSON",
-                "topic": "8002_1252_6042_1372/received/digital_nameplate",
-                "query": "$.DigitalNameplate.ContactInformation.NationalCode"
-            }
-        }
-    },
-    {
-        "@class": "de.fraunhofer.iosb.ilt.faaast.service.assetconnection.mqtt.MqttAssetConnection",
-        "serverUri": "tcp://localhost:1883",
-        "username": "user1",
-        "password": "12345",
-        "subscriptionProviders":
-        {
-
-            "[ModelRef](Submodel)https://admin-shell.io/idta/SubmodelTemplate/DigitalNameplate/2/0, (SubmodelElementCollection)ContactInformation, (MultiLanguageProperty)CityTown":
-            {
-                "format": "JSON",
-                "topic": "8002_1252_6042_1372/received/digital_nameplate",
-                "query": "$.DigitalNameplate.ContactInformation.CityTown"
-            }
-        }
-    },
-    {
-        "@class": "de.fraunhofer.iosb.ilt.faaast.service.assetconnection.mqtt.MqttAssetConnection",
-        "serverUri": "tcp://localhost:1883",
-        "username": "user1",
-        "password": "12345",
-        "subscriptionProviders":
-        {
-
-            "[ModelRef](Submodel)https://admin-shell.io/idta/SubmodelTemplate/DigitalNameplate/2/0, (SubmodelElementCollection)ContactInformation, (MultiLanguageProperty)Company":
-            {
-                "format": "JSON",
-                "topic": "8002_1252_6042_1372/received/digital_nameplate",
-                "query": "$.DigitalNameplate.ContactInformation.Company"
-            }
-        }
-    },
-    {
-        "@class": "de.fraunhofer.iosb.ilt.faaast.service.assetconnection.mqtt.MqttAssetConnection",
-        "serverUri": "tcp://localhost:1883",
-        "username": "user1",
-        "password": "12345",
-        "subscriptionProviders":
-        {
-
-            "[ModelRef](Submodel)https://admin-shell.io/idta/SubmodelTemplate/DigitalNameplate/2/0, (SubmodelElementCollection)ContactInformation, (SubmodelElementCollection)Phone, (MultiLanguageProperty)TelephoneNumber":
-            {
-                "format": "JSON",
-                "topic": "8002_1252_6042_1372/received/digital_nameplate",
-                "query": "$.DigitalNameplate.ContactInformation.Phone.TelephoneNumber"
-            }
-        }
-    },
-    {
-        "@class": "de.fraunhofer.iosb.ilt.faaast.service.assetconnection.mqtt.MqttAssetConnection",
-        "serverUri": "tcp://localhost:1883",
-        "username": "user1",
-        "password": "12345",
-        "subscriptionProviders":
-        {
-
-            "[ModelRef](Submodel)https://admin-shell.io/idta/SubmodelTemplate/DigitalNameplate/2/0, (SubmodelElementCollection)ContactInformation, (SubmodelElementCollection)Email, (Property)EmailAddress":
-            {
-                "format": "JSON",
-                "topic": "8002_1252_6042_1372/received/digital_nameplate",
-                "query": "$.DigitalNameplate.ContactInformation.Email[0].EmailAddress"
-            }
-        }
-    },
-    {
-        "@class": "de.fraunhofer.iosb.ilt.faaast.service.assetconnection.mqtt.MqttAssetConnection",
-        "serverUri": "tcp://localhost:1883",
-        "username": "user1",
-        "password": "12345",
-        "subscriptionProviders":
-        {
-
-            "[ModelRef](Submodel)https://admin-shell.io/idta/SubmodelTemplate/DigitalNameplate/2/0, (SubmodelElementCollection)ContactInformation, (MultiLanguageProperty)Street":
-            {
-                "format": "JSON",
-                "topic": "8002_1252_6042_1372/received/digital_nameplate",
-                "query": "$.DigitalNameplate.ContactInformation.Street"
-            }
-        }
-    },
-    {
-        "@class": "de.fraunhofer.iosb.ilt.faaast.service.assetconnection.mqtt.MqttAssetConnection",
-        "serverUri": "tcp://localhost:1883",
-        "username": "user1",
-        "password": "12345",
-        "subscriptionProviders":
-        {
-
-            "[ModelRef](Submodel)https://admin-shell.io/idta/SubmodelTemplate/DigitalNameplate/2/0, (SubmodelElementCollection)ContactInformation, (MultiLanguageProperty)Zipcode":
-            {
-                "format": "JSON",
-                "topic": "8002_1252_6042_1372/received/digital_nameplate",
-                "query": "$.DigitalNameplate.ContactInformation.Zipcode"
-            }
-        }
-    },
-    {
-        "@class": "de.fraunhofer.iosb.ilt.faaast.service.assetconnection.mqtt.MqttAssetConnection",
-        "serverUri": "tcp://localhost:1883",
-        "username": "user1",
-        "password": "12345",
-        "subscriptionProviders":
-        {
-
-            "[ModelRef](Submodel)https://admin-shell.io/idta/SubmodelTemplate/DigitalNameplate/2/0, (SubmodelElementCollection)ContactInformation, (MultiLanguageProperty)StateCounty":
-            {
-                "format": "JSON",
-                "topic": "8002_1252_6042_1372/received/digital_nameplate",
-                "query": "$.DigitalNameplate.ContactInformation.StateCounty"
-            }
-        }
-    },
-    {
-        "@class": "de.fraunhofer.iosb.ilt.faaast.service.assetconnection.mqtt.MqttAssetConnection",
-        "serverUri": "tcp://localhost:1883",
-        "username": "user1",
-        "password": "12345",
-        "subscriptionProviders":
-        {
-
-            "[ModelRef](Submodel)https://admin-shell.io/idta/SubmodelTemplate/DigitalNameplate/2/0, (Property)SerialNumber":
-            {
-                "format": "JSON",
-                "topic": "8002_1252_6042_1372/received/digital_nameplate",
-                "query": "$.DigitalNameplate.SerialNumber"
-            }
-        }
-    },
-    {
-        "@class": "de.fraunhofer.iosb.ilt.faaast.service.assetconnection.mqtt.MqttAssetConnection",
-        "serverUri": "tcp://localhost:1883",
-        "username": "user1",
-        "password": "12345",
-        "subscriptionProviders":
-        {
-
-            "[ModelRef](Submodel)https://admin-shell.io/idta/SubmodelTemplate/DigitalNameplate/2/0, (Property)YearOfConstruction":
-            {
-                "format": "JSON",
-                "topic": "8002_1252_6042_1372/received/digital_nameplate",
-                "query": "$.DigitalNameplate.YearOfConstruction"
-            }
-        }
-    },
-    {
-        "@class": "de.fraunhofer.iosb.ilt.faaast.service.assetconnection.mqtt.MqttAssetConnection",
-        "serverUri": "tcp://localhost:1883",
-        "username": "user1",
-        "password": "12345",
-        "subscriptionProviders":
-        {
-
-            "[ModelRef](Submodel)https://admin-shell.io/idta/SubmodelTemplate/DigitalNameplate/2/0, (Property)DateOfManufacture":
-            {
-                "format": "JSON",
-                "topic": "8002_1252_6042_1372/received/digital_nameplate",
-                "query": "$.DigitalNameplate.DateOfManufacture"
-            }
-        }
-    },
-    {
-        "@class": "de.fraunhofer.iosb.ilt.faaast.service.assetconnection.mqtt.MqttAssetConnection",
-        "serverUri": "tcp://localhost:1883",
-        "username": "user1",
-        "password": "12345",
-        "subscriptionProviders":
-        {
-
-            "[ModelRef](Submodel)https://admin-shell.io/idta/SubmodelTemplate/DigitalNameplate/2/0, (MultiLanguageProperty)HardwareVersion":
-            {
-                "format": "JSON",
-                "topic": "8002_1252_6042_1372/received/digital_nameplate",
-                "query": "$.DigitalNameplate.HardwareVersion"
-            }
-        }
-    },
-    {
-        "@class": "de.fraunhofer.iosb.ilt.faaast.service.assetconnection.mqtt.MqttAssetConnection",
-        "serverUri": "tcp://localhost:1883",
-        "username": "user1",
-        "password": "12345",
-        "subscriptionProviders":
-        {
-
-            "[ModelRef](Submodel)https://admin-shell.io/idta/SubmodelTemplate/DigitalNameplate/2/0, (MultiLanguageProperty)FirmwareVersion":
-            {
-                "format": "JSON",
-                "topic": "8002_1252_6042_1372/received/digital_nameplate",
-                "query": "$.DigitalNameplate.FirmwareVersion"
-            }
-        }
-    },
-    {
-        "@class": "de.fraunhofer.iosb.ilt.faaast.service.assetconnection.mqtt.MqttAssetConnection",
-        "serverUri": "tcp://localhost:1883",
-        "username": "user1",
-        "password": "12345",
-        "subscriptionProviders":
-        {
-
-            "[ModelRef](Submodel)https://admin-shell.io/idta/SubmodelTemplate/DigitalNameplate/2/0, (MultiLanguageProperty)SoftwareVersion":
-            {
-                "format": "JSON",
-                "topic": "8002_1252_6042_1372/received/digital_nameplate",
-                "query": "$.DigitalNameplate.SoftwareVersion"
-            }
-        }
-    },
-    {
-        "@class": "de.fraunhofer.iosb.ilt.faaast.service.assetconnection.mqtt.MqttAssetConnection",
-        "serverUri": "tcp://localhost:1883",
-        "username": "user1",
-        "password": "12345",
-        "subscriptionProviders":
-        {
-
-            "[ModelRef](Submodel)https://admin-shell.io/idta/SubmodelTemplate/DigitalNameplate/2/0, (Property)CountryOfOrigin":
-            {
-                "format": "JSON",
-                "topic": "8002_1252_6042_1372/received/digital_nameplate",
-                "query": "$.DigitalNameplate.CountryOfOrigin"
-            }
-        }
-    },
-    {
-        "@class": "de.fraunhofer.iosb.ilt.faaast.service.assetconnection.mqtt.MqttAssetConnection",
-        "serverUri": "tcp://localhost:1883",
-        "username": "user1",
-        "password": "12345",
-        "subscriptionProviders":
-        {
-
-            "[ModelRef](Submodel)https://admin-shell.io/ZVEI/TechnicalData/Submodel/1/2, (SubmodelElementCollection)GeneralInformation, (Property)ManufacturerName":
-            {
-                "format": "JSON",
-                "topic": "8002_1252_6042_1372/received/technical_data",
-                "query": "$.TechnicalData.GeneralInformation.ManufacturerName"
-            }
-        }
-    },
-    {
-        "@class": "de.fraunhofer.iosb.ilt.faaast.service.assetconnection.mqtt.MqttAssetConnection",
-        "serverUri": "tcp://localhost:1883",
-        "username": "user1",
-        "password": "12345",
-        "subscriptionProviders":
-        {
-
-            "[ModelRef](Submodel)https://admin-shell.io/ZVEI/TechnicalData/Submodel/1/2, (SubmodelElementCollection)GeneralInformation, (MultiLanguageProperty)ManufacturerProductDesignation":
-            {
-                "format": "JSON",
-                "topic": "8002_1252_6042_1372/received/technical_data",
-                "query": "$.TechnicalData.GeneralInformation.ManufacturerProductDesignation"
-            }
-        }
-    },
-    {
-        "@class": "de.fraunhofer.iosb.ilt.faaast.service.assetconnection.mqtt.MqttAssetConnection",
-        "serverUri": "tcp://localhost:1883",
-        "username": "user1",
-        "password": "12345",
-        "subscriptionProviders":
-        {
-
-            "[ModelRef](Submodel)https://admin-shell.io/ZVEI/TechnicalData/Submodel/1/2, (SubmodelElementCollection)GeneralInformation, (Property)ManufacturerArticleNumber":
-            {
-                "format": "JSON",
-                "topic": "8002_1252_6042_1372/received/technical_data",
-                "query": "$.TechnicalData.GeneralInformation.ManufacturerArticleNumber"
-            }
-        }
-    },
-    {
-        "@class": "de.fraunhofer.iosb.ilt.faaast.service.assetconnection.mqtt.MqttAssetConnection",
-        "serverUri": "tcp://localhost:1883",
-        "username": "user1",
-        "password": "12345",
-        "subscriptionProviders":
-        {
-
-            "[ModelRef](Submodel)https://admin-shell.io/ZVEI/TechnicalData/Submodel/1/2, (SubmodelElementCollection)GeneralInformation, (Property)ManufacturerOrderCode":
-            {
-                "format": "JSON",
-                "topic": "8002_1252_6042_1372/received/technical_data",
-                "query": "$.TechnicalData.GeneralInformation.ManufacturerOrderCode"
-            }
-        }
-    },
-    {
-        "@class": "de.fraunhofer.iosb.ilt.faaast.service.assetconnection.mqtt.MqttAssetConnection",
-        "serverUri": "tcp://localhost:1883",
-        "username": "user1",
-        "password": "12345",
-        "subscriptionProviders":
-        {
-
-            "[ModelRef](Submodel)https://admin-shell.io/ZVEI/TechnicalData/Submodel/1/2, (SubmodelElementCollection)TechnicalProperties, (SubmodelElementCollection)Dimentions, (Property)Width":
-            {
-                "format": "JSON",
-                "topic": "8002_1252_6042_1372/received/technical_data",
-                "query": "$.TechnicalData.TechnicalProperties.Dimentions.Width"
-            }
-        }
-    },
-    {
-        "@class": "de.fraunhofer.iosb.ilt.faaast.service.assetconnection.mqtt.MqttAssetConnection",
-        "serverUri": "tcp://localhost:1883",
-        "username": "user1",
-        "password": "12345",
-        "subscriptionProviders":
-        {
-
-            "[ModelRef](Submodel)https://admin-shell.io/ZVEI/TechnicalData/Submodel/1/2, (SubmodelElementCollection)TechnicalProperties, (SubmodelElementCollection)Dimentions, (Property)Height":
-            {
-                "format": "JSON",
-                "topic": "8002_1252_6042_1372/received/technical_data",
-                "query": "$.TechnicalData.TechnicalProperties.Dimentions.Height"
-            }
-        }
-    },
-    {
-        "@class": "de.fraunhofer.iosb.ilt.faaast.service.assetconnection.mqtt.MqttAssetConnection",
-        "serverUri": "tcp://localhost:1883",
-        "username": "user1",
-        "password": "12345",
-        "subscriptionProviders":
-        {
-
-            "[ModelRef](Submodel)https://admin-shell.io/ZVEI/TechnicalData/Submodel/1/2, (SubmodelElementCollection)TechnicalProperties, (SubmodelElementCollection)Dimentions, (Property)Depth":
-            {
-                "format": "JSON",
-                "topic": "8002_1252_6042_1372/received/technical_data",
-                "query": "$.TechnicalData.TechnicalProperties.Dimentions.Depth"
-            }
-        }
-    },
-    {
-        "@class": "de.fraunhofer.iosb.ilt.faaast.service.assetconnection.mqtt.MqttAssetConnection",
-        "serverUri": "tcp://localhost:1883",
-        "username": "user1",
-        "password": "12345",
-        "subscriptionProviders":
-        {
-
-            "[ModelRef](Submodel)https://admin-shell.io/ZVEI/TechnicalData/Submodel/1/2, (SubmodelElementCollection)TechnicalProperties, (SubmodelElementCollection)Connections, (Property)HDMI":
-            {
-                "format": "JSON",
-                "topic": "8002_1252_6042_1372/received/technical_data",
-                "query": "$.TechnicalData.TechnicalProperties.Connections.HDMI"
-            }
-        }
-    },
-    {
-        "@class": "de.fraunhofer.iosb.ilt.faaast.service.assetconnection.mqtt.MqttAssetConnection",
-        "serverUri": "tcp://localhost:1883",
-        "username": "user1",
-        "password": "12345",
-        "subscriptionProviders":
-        {
-
-            "[ModelRef](Submodel)https://admin-shell.io/ZVEI/TechnicalData/Submodel/1/2, (SubmodelElementCollection)TechnicalProperties, (SubmodelElementCollection)Connections, (Property)USB":
-            {
-                "format": "JSON",
-                "topic": "8002_1252_6042_1372/received/technical_data",
-                "query": "$.TechnicalData.TechnicalProperties.Connections.USB"
-            }
-        }
-    },
-    {
-        "@class": "de.fraunhofer.iosb.ilt.faaast.service.assetconnection.mqtt.MqttAssetConnection",
-        "serverUri": "tcp://localhost:1883",
-        "username": "user1",
-        "password": "12345",
-        "subscriptionProviders":
-        {
-
-            "[ModelRef](Submodel)https://admin-shell.io/ZVEI/TechnicalData/Submodel/1/2, (SubmodelElementCollection)TechnicalProperties, (SubmodelElementCollection)Connections, (Property)RF":
-            {
-                "format": "JSON",
-                "topic": "8002_1252_6042_1372/received/technical_data",
-                "query": "$.TechnicalData.TechnicalProperties.Connections.RF"
-            }
-        }
-    },
-    {
-        "@class": "de.fraunhofer.iosb.ilt.faaast.service.assetconnection.mqtt.MqttAssetConnection",
-        "serverUri": "tcp://localhost:1883",
-        "username": "user1",
-        "password": "12345",
-        "subscriptionProviders":
-        {
-
-            "[ModelRef](Submodel)https://admin-shell.io/ZVEI/TechnicalData/Submodel/1/2, (SubmodelElementCollection)TechnicalProperties, (SubmodelElementCollection)Connections, (Property)WiFi":
-            {
-                "format": "JSON",
-                "topic": "8002_1252_6042_1372/received/technical_data",
-                "query": "$.TechnicalData.TechnicalProperties.Connections.WiFi"
-            }
-        }
-    },
-    {
-        "@class": "de.fraunhofer.iosb.ilt.faaast.service.assetconnection.mqtt.MqttAssetConnection",
-        "serverUri": "tcp://localhost:1883",
-        "username": "user1",
-        "password": "12345",
-        "subscriptionProviders":
-        {
-
-            "[ModelRef](Submodel)https://admin-shell.io/ZVEI/TechnicalData/Submodel/1/2, (SubmodelElementCollection)TechnicalProperties, (SubmodelElementCollection)Connections, (Property)Ethernet":
-            {
-                "format": "JSON",
-                "topic": "8002_1252_6042_1372/received/technical_data",
-                "query": "$.TechnicalData.TechnicalProperties.Connections.Ethernet"
-            }
-        }
-    },
-    {
-        "@class": "de.fraunhofer.iosb.ilt.faaast.service.assetconnection.mqtt.MqttAssetConnection",
-        "serverUri": "tcp://localhost:1883",
-        "username": "user1",
-        "password": "12345",
-        "subscriptionProviders":
-        {
-
-            "[ModelRef](Submodel)https://admin-shell.io/ZVEI/TechnicalData/Submodel/1/2, (SubmodelElementCollection)TechnicalProperties, (SubmodelElementCollection)Connections, (Property)Bluetooth":
-            {
-                "format": "JSON",
-                "topic": "8002_1252_6042_1372/received/technical_data",
-                "query": "$.TechnicalData.TechnicalProperties.Connections.Bluetooth"
-            }
-        }
-    },
-    {
-        "@class": "de.fraunhofer.iosb.ilt.faaast.service.assetconnection.mqtt.MqttAssetConnection",
-        "serverUri": "tcp://localhost:1883",
-        "username": "user1",
-        "password": "12345",
-        "subscriptionProviders":
-        {
-
-            "[ModelRef](Submodel)https://admin-shell.io/ZVEI/TechnicalData/Submodel/1/2, (SubmodelElementCollection)TechnicalProperties, (SubmodelElementCollection)ScreenInformations, (Property)Frequency":
-            {
-                "format": "JSON",
-                "topic": "8002_1252_6042_1372/received/technical_data",
-                "query": "$.TechnicalData.TechnicalProperties.ScreenInformations.Frequency"
-            }
-        }
-    },
-    {
-        "@class": "de.fraunhofer.iosb.ilt.faaast.service.assetconnection.mqtt.MqttAssetConnection",
-        "serverUri": "tcp://localhost:1883",
-        "username": "user1",
-        "password": "12345",
-        "subscriptionProviders":
-        {
-
-            "[ModelRef](Submodel)https://admin-shell.io/ZVEI/TechnicalData/Submodel/1/2, (SubmodelElementCollection)TechnicalProperties, (SubmodelElementCollection)ScreenInformations, (Property)Resolution":
-            {
-                "format": "JSON",
-                "topic": "8002_1252_6042_1372/received/technical_data",
-                "query": "$.TechnicalData.TechnicalProperties.ScreenInformations.Resolution"
-            }
-        }
-    },
-    {
-        "@class": "de.fraunhofer.iosb.ilt.faaast.service.assetconnection.mqtt.MqttAssetConnection",
-        "serverUri": "tcp://localhost:1883",
-        "username": "user1",
-        "password": "12345",
-        "subscriptionProviders":
-        {
-
-            "[ModelRef](Submodel)https://admin-shell.io/ZVEI/TechnicalData/Submodel/1/2, (SubmodelElementCollection)TechnicalProperties, (SubmodelElementCollection)ScreenInformations, (Property)ScreenSize":
-            {
-                "format": "JSON",
-                "topic": "8002_1252_6042_1372/received/technical_data",
-                "query": "$.TechnicalData.TechnicalProperties.ScreenInformations.ScreenSize"
-            }
-        }
-    },
-    {
-        "@class": "de.fraunhofer.iosb.ilt.faaast.service.assetconnection.mqtt.MqttAssetConnection",
-        "serverUri": "tcp://localhost:1883",
-        "username": "user1",
-        "password": "12345",
-        "subscriptionProviders":
-        {
-
-            "[ModelRef](Submodel)https://admin-shell.io/ZVEI/TechnicalData/Submodel/1/2, (SubmodelElementCollection)TechnicalProperties, (SubmodelElementCollection)ScreenInformations, (Property)ScreenTechnology":
-            {
-                "format": "JSON",
-                "topic": "8002_1252_6042_1372/received/technical_data",
-                "query": "$.TechnicalData.TechnicalProperties.ScreenInformations.ScreenTechnology"
-            }
-        }
-    },
-    {
-        "@class": "de.fraunhofer.iosb.ilt.faaast.service.assetconnection.mqtt.MqttAssetConnection",
-        "serverUri": "tcp://localhost:1883",
-        "username": "user1",
-        "password": "12345",
-        "subscriptionProviders":
-        {
-
-            "[ModelRef](Submodel)https://admin-shell.io/ZVEI/TechnicalData/Submodel/1/2, (SubmodelElementCollection)TechnicalProperties, (SubmodelElementCollection)Others, (Property)OperationSystem":
-            {
-                "format": "JSON",
-                "topic": "8002_1252_6042_1372/received/technical_data",
-                "query": "$.TechnicalData.TechnicalProperties.Others.OperationSystem"
-            }
-        }
-    },
-    {
-        "@class": "de.fraunhofer.iosb.ilt.faaast.service.assetconnection.mqtt.MqttAssetConnection",
-        "serverUri": "tcp://localhost:1883",
-        "username": "user1",
-        "password": "12345",
-        "subscriptionProviders":
-        {
-
-            "[ModelRef](Submodel)https://admin-shell.io/ZVEI/TechnicalData/Submodel/1/2, (SubmodelElementCollection)TechnicalProperties, (SubmodelElementCollection)Others, (Property)Color":
-            {
-                "format": "JSON",
-                "topic": "8002_1252_6042_1372/received/technical_data",
-                "query": "$.TechnicalData.TechnicalProperties.Others.Color"
-            }
-        }
-    },
-    {
-        "@class": "de.fraunhofer.iosb.ilt.faaast.service.assetconnection.mqtt.MqttAssetConnection",
-        "serverUri": "tcp://localhost:1883",
-        "username": "user1",
-        "password": "12345",
-        "subscriptionProviders":
-        {
-
-            "[ModelRef](Submodel)https://admin-shell.io/ZVEI/TechnicalData/Submodel/1/2, (SubmodelElementCollection)TechnicalProperties, (SubmodelElementCollection)Others, (Property)Weight":
-            {
-                "format": "JSON",
-                "topic": "8002_1252_6042_1372/received/technical_data",
-                "query": "$.TechnicalData.TechnicalProperties.Others.Weight"
-            }
-        }
-    },
-    {
-        "@class": "de.fraunhofer.iosb.ilt.faaast.service.assetconnection.mqtt.MqttAssetConnection",
-        "serverUri": "tcp://localhost:1883",
-        "username": "user1",
-        "password": "12345",
-        "subscriptionProviders":
-        {
-
-            "[ModelRef](Submodel)https://admin-shell.io/idta/SubmodelTemplate/ContactInformation/1/0, (SubmodelElementCollection)ContactInformation, (MultiLanguageProperty)CityTown":
-            {
-                "format": "JSON",
-                "topic": "8002_1252_6042_1372/received/vendor_informations",
-                "query": "$.VendorInformations.ContactInformation.CityTown"
-            }
-        }
-    },
-    {
-        "@class": "de.fraunhofer.iosb.ilt.faaast.service.assetconnection.mqtt.MqttAssetConnection",
-        "serverUri": "tcp://localhost:1883",
-        "username": "user1",
-        "password": "12345",
-        "subscriptionProviders":
-        {
-
-            "[ModelRef](Submodel)https://admin-shell.io/idta/SubmodelTemplate/ContactInformation/1/0, (SubmodelElementCollection)ContactInformation, (MultiLanguageProperty)Company":
-            {
-                "format": "JSON",
-                "topic": "8002_1252_6042_1372/received/vendor_informations",
-                "query": "$.VendorInformations.ContactInformation.Company"
-            }
-        }
-    },
-    {
-        "@class": "de.fraunhofer.iosb.ilt.faaast.service.assetconnection.mqtt.MqttAssetConnection",
-        "serverUri": "tcp://localhost:1883",
-        "username": "user1",
-        "password": "12345",
-        "subscriptionProviders":
-        {
-
-            "[ModelRef](Submodel)https://admin-shell.io/idta/SubmodelTemplate/ContactInformation/1/0, (SubmodelElementCollection)ContactInformation, (MultiLanguageProperty)Department":
-            {
-                "format": "JSON",
-                "topic": "8002_1252_6042_1372/received/vendor_informations",
-                "query": "$.VendorInformations.ContactInformation.Department"
-            }
-        }
-    },
-    {
-        "@class": "de.fraunhofer.iosb.ilt.faaast.service.assetconnection.mqtt.MqttAssetConnection",
-        "serverUri": "tcp://localhost:1883",
-        "username": "user1",
-        "password": "12345",
-        "subscriptionProviders":
-        {
-
-            "[ModelRef](Submodel)https://admin-shell.io/idta/SubmodelTemplate/ContactInformation/1/0, (SubmodelElementCollection)ContactInformation, (SubmodelElementCollection)Phone, (MultiLanguageProperty)TelephoneNumber":
-            {
-                "format": "JSON",
-                "topic": "8002_1252_6042_1372/received/vendor_informations",
-                "query": "$.VendorInformations.ContactInformation.Phone.TelephoneNumber"
-            }
-        }
-    },
-    {
-        "@class": "de.fraunhofer.iosb.ilt.faaast.service.assetconnection.mqtt.MqttAssetConnection",
-        "serverUri": "tcp://localhost:1883",
-        "username": "user1",
-        "password": "12345",
-        "subscriptionProviders":
-        {
-
-            "[ModelRef](Submodel)https://admin-shell.io/idta/SubmodelTemplate/ContactInformation/1/0, (SubmodelElementCollection)ContactInformation, (SubmodelElementCollection)Email, (Property)EmailAddress":
-            {
-                "format": "JSON",
-                "topic": "8002_1252_6042_1372/received/vendor_informations",
-                "query": "$.VendorInformations.ContactInformation.Email.EmailAddress"
-            }
-        }
-    },
-    {
-        "@class": "de.fraunhofer.iosb.ilt.faaast.service.assetconnection.mqtt.MqttAssetConnection",
-        "serverUri": "tcp://localhost:1883",
-        "username": "user1",
-        "password": "12345",
-        "subscriptionProviders":
-        {
-
-            "[ModelRef](Submodel)https://admin-shell.io/idta/SubmodelTemplate/ContactInformation/1/0, (SubmodelElementCollection)ContactInformation, (MultiLanguageProperty)Street":
-            {
-                "format": "JSON",
-                "topic": "8002_1252_6042_1372/received/vendor_informations",
-                "query": "$.VendorInformations.Street"
-            }
-        }
-    },
-    {
-        "@class": "de.fraunhofer.iosb.ilt.faaast.service.assetconnection.mqtt.MqttAssetConnection",
-        "serverUri": "tcp://localhost:1883",
-        "username": "user1",
-        "password": "12345",
-        "subscriptionProviders":
-        {
-
-            "[ModelRef](Submodel)https://admin-shell.io/idta/SubmodelTemplate/ContactInformation/1/0, (SubmodelElementCollection)ContactInformation, (MultiLanguageProperty)Zipcode":
-            {
-                "format": "JSON",
-                "topic": "8002_1252_6042_1372/received/vendor_informations",
-                "query": "$.VendorInformations.ContactInformation.Zipcode"
-            }
-        }
-    },
-    {
-        "@class": "de.fraunhofer.iosb.ilt.faaast.service.assetconnection.mqtt.MqttAssetConnection",
-        "serverUri": "tcp://localhost:1883",
-        "username": "user1",
-        "password": "12345",
-        "subscriptionProviders":
-        {
-
-            "[ModelRef](Submodel)https://admin-shell.io/idta/SubmodelTemplate/ContactInformation/1/0, (SubmodelElementCollection)ContactInformation, (MultiLanguageProperty)StateCounty":
-            {
-                "format": "JSON",
-                "topic": "8002_1252_6042_1372/received/vendor_informations",
-                "query": "$.VendorInformations.ContactInformation.StateCounty"
-            }
-        }
-    },
-    {
-        "@class": "de.fraunhofer.iosb.ilt.faaast.service.assetconnection.mqtt.MqttAssetConnection",
-        "serverUri": "tcp://localhost:1883",
-        "username": "user1",
-        "password": "12345",
-        "subscriptionProviders":
-        {
-
-            "[ModelRef](Submodel)https://tpv-tech.com.br/ids/sm/profile/3561_1252_6042_9723, (SubmodelElementCollection)Streaming, (Property)AccumulatedTime":
-            {
-                "format": "JSON",
-                "topic": "8002_1252_6042_1372/received/profile",
-                "query": "$.Profile.Streaming.AccumulatedTime"
-            }
-        }
-    },
-    {
-        "@class": "de.fraunhofer.iosb.ilt.faaast.service.assetconnection.mqtt.MqttAssetConnection",
-        "serverUri": "tcp://localhost:1883",
-        "username": "user1",
-        "password": "12345",
-        "subscriptionProviders":
-        {
-
-            "[ModelRef](Submodel)https://tpv-tech.com.br/ids/sm/profile/3561_1252_6042_9723, (SubmodelElementCollection)Streaming, (Property)BeginTime":
-            {
-                "format": "JSON",
-                "topic": "8002_1252_6042_1372/received/profile",
-                "query": "$.Profile.Streaming.BeginTime"
-            }
-        }
-    },
-    {
-        "@class": "de.fraunhofer.iosb.ilt.faaast.service.assetconnection.mqtt.MqttAssetConnection",
-        "serverUri": "tcp://localhost:1883",
-        "username": "user1",
-        "password": "12345",
-        "subscriptionProviders":
-        {
-
-            "[ModelRef](Submodel)https://tpv-tech.com.br/ids/sm/profile/3561_1252_6042_9723, (SubmodelElementCollection)Streaming, (Property)EndTime":
-            {
-                "format": "JSON",
-                "topic": "8002_1252_6042_1372/received/profile",
-                "query": "$.Profile.Streaming.EndTime"
-            }
-        }
-    },
-    {
-        "@class": "de.fraunhofer.iosb.ilt.faaast.service.assetconnection.mqtt.MqttAssetConnection",
-        "serverUri": "tcp://localhost:1883",
-        "username": "user1",
-        "password": "12345",
-        "subscriptionProviders":
-        {
-
-            "[ModelRef](Submodel)https://tpv-tech.com.br/ids/sm/profile/3561_1252_6042_9723, (SubmodelElementCollection)LiveTV, (Property)AccumulatedTime":
-            {
-                "format": "JSON",
-                "topic": "8002_1252_6042_1372/received/profile",
-                "query": "$.Profile.LiveTV.AccumulatedTime"
-            }
-        }
-    },
-    {
-        "@class": "de.fraunhofer.iosb.ilt.faaast.service.assetconnection.mqtt.MqttAssetConnection",
-        "serverUri": "tcp://localhost:1883",
-        "username": "user1",
-        "password": "12345",
-        "subscriptionProviders":
-        {
-
-            "[ModelRef](Submodel)https://tpv-tech.com.br/ids/sm/profile/3561_1252_6042_9723, (SubmodelElementCollection)LiveTV, (Property)BeginTime":
-            {
-                "format": "JSON",
-                "topic": "8002_1252_6042_1372/received/profile",
-                "query": "$.Profile.LiveTV.BeginTime"
-            }
-        }
-    },
-    {
-        "@class": "de.fraunhofer.iosb.ilt.faaast.service.assetconnection.mqtt.MqttAssetConnection",
-        "serverUri": "tcp://localhost:1883",
-        "username": "user1",
-        "password": "12345",
-        "subscriptionProviders":
-        {
-
-            "[ModelRef](Submodel)https://tpv-tech.com.br/ids/sm/profile/3561_1252_6042_9723, (SubmodelElementCollection)LiveTV, (Property)EndTime":
-            {
-                "format": "JSON",
-                "topic": "8002_1252_6042_1372/received/profile",
-                "query": "$.Profile.LiveTV.EndTime"
-            }
-        }
-    },
-    {
-        "@class": "de.fraunhofer.iosb.ilt.faaast.service.assetconnection.mqtt.MqttAssetConnection",
-        "serverUri": "tcp://localhost:1883",
-        "username": "user1",
-        "password": "12345",
-        "subscriptionProviders":
-        {
-
-            "[ModelRef](Submodel)https://tpv-tech.com.br/ids/sm/profile/3561_1252_6042_9723, (SubmodelElementCollection)InteractiveApplication, (Property)AccumulatedTime":
-            {
-                "format": "JSON",
-                "topic": "8002_1252_6042_1372/received/profile",
-                "query": "$.Profile.InteractiveApplication.AccumulatedTime"
-            }
-        }
-    },
-    {
-        "@class": "de.fraunhofer.iosb.ilt.faaast.service.assetconnection.mqtt.MqttAssetConnection",
-        "serverUri": "tcp://localhost:1883",
-        "username": "user1",
-        "password": "12345",
-        "subscriptionProviders":
-        {
-
-            "[ModelRef](Submodel)https://tpv-tech.com.br/ids/sm/profile/3561_1252_6042_9723, (SubmodelElementCollection)InteractiveApplication, (Property)BeginTime":
-            {
-                "format": "JSON",
-                "topic": "8002_1252_6042_1372/received/profile",
-                "query": "$.Profile.InteractiveApplication.BeginTime"
-            }
-        }
-    },
-    {
-        "@class": "de.fraunhofer.iosb.ilt.faaast.service.assetconnection.mqtt.MqttAssetConnection",
-        "serverUri": "tcp://localhost:1883",
-        "username": "user1",
-        "password": "12345",
-        "subscriptionProviders":
-        {
-
-            "[ModelRef](Submodel)https://tpv-tech.com.br/ids/sm/profile/3561_1252_6042_9723, (SubmodelElementCollection)InteractiveApplication, (Property)EndTime":
-            {
-                "format": "JSON",
-                "topic": "8002_1252_6042_1372/received/profile",
-                "query": "$.Profile.InteractiveApplication.EndTime"
-            }
-        }
-    }  
     ]
 }
-

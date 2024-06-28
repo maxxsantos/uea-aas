@@ -110,8 +110,8 @@ def main():
                             .show_prologue_bottom_border(True))
     
     submenu_tv_roku.append_item(function_publish_digital_nameplate_info)
-    submenu_tv_roku.append_item(function_publish_vendor_informations_info)
     submenu_tv_roku.append_item(function_publish_technical_data_info)
+    submenu_tv_roku.append_item(function_publish_vendor_informations_info)
     submenu_tv_roku.append_item(function_publish_profile_info)
     
     # Menu item for opening submenu 3
